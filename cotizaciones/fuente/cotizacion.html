@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cotización Rapid · Community Manager</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--navy:#2b3180;--navy2:#22276b;--blue:#4471c4;--ink:#22264f;--txt:#3b3f5c;--muted:#6b6f8a;--line:#d9def0;--soft:#eef2fb;--green:#27a84a;--cyan:#3a79c9}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',sans-serif;color:var(--txt);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:794px;height:1123px;position:relative;overflow:hidden;background:#fff}
+.net{position:absolute;right:0;top:0;width:520px;opacity:.9}
+.robot{position:absolute;left:50%;top:560px;width:430px;transform:translateX(-50%);opacity:.06}
+.logo{position:absolute;left:44px;top:36px;width:250px}
+h1{position:absolute;left:0;right:0;top:140px;text-align:center;font-weight:900;font-size:22.5px;color:var(--navy2);letter-spacing:.2px}
+.pill{position:absolute;left:50%;transform:translateX(-50%);top:175px;background:var(--navy);color:#fff;font-weight:700;font-size:12.5px;letter-spacing:2.4px;padding:7px 20px;border-radius:20px;white-space:nowrap}
+.wrap{position:absolute;left:76px;right:76px;top:218px}
+.meta{display:grid;grid-template-columns:1.6fr .75fr .8fr;border:1px solid var(--line);border-radius:8px;background:#fff}
+.meta div{padding:10px 14px}
+.meta div+div{border-left:1px solid var(--line)}
+.meta small{display:block;font-weight:900;font-size:9.5px;letter-spacing:1.4px;color:var(--cyan);margin-bottom:3px}
+.meta b{font-size:13px;color:var(--ink)}
+.sec{display:flex;align-items:center;gap:10px;font-weight:900;font-size:14px;color:var(--ink);margin:12px 0 7px}
+.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.intro{font-size:12.3px;line-height:1.6}
+.intro b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+.box{border:1px solid var(--line);border-radius:7px;overflow:hidden;background:rgba(255,255,255,.92)}
+.box h3{background:var(--blue);color:#fff;font-size:11px;font-weight:900;letter-spacing:.3px;padding:6px 12px;text-transform:uppercase}
+.box ul{list-style:none;padding:5px 12px 6px}
+.box li{display:flex;justify-content:space-between;gap:10px;font-size:11px;line-height:1.3;padding:2.5px 0;border-bottom:1px dashed #e3e7f3}
+.box li:last-child{border-bottom:none}
+.box li span{position:relative;padding-left:13px}
+.box li span::before{content:"";position:absolute;left:0;top:5px;width:6px;height:6px;border-radius:50%;background:var(--navy)}
+.box li em{font-style:normal;font-weight:700;color:var(--navy2);text-align:right;white-space:nowrap}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tm{background:var(--soft);border-left:3px solid var(--blue);border-radius:6px;padding:6px 8px;display:flex;gap:7px;align-items:center}
+.tm b{display:block;font-size:17px;color:var(--navy2);font-weight:900;line-height:1}
+.tm span{font-size:10px;line-height:1.25;color:var(--txt);display:block}
+.price{display:grid;grid-template-columns:1fr 1.05fr;gap:14px;margin-top:12px}
+.inv{border:1px solid var(--line);border-radius:8px;padding:10px 14px;background:#fff}
+.inv h4{font-size:12.5px;font-weight:900;color:var(--ink);margin-bottom:6px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px dashed var(--line)}
+.row b{font-size:12px;color:var(--ink);display:block}
+.row small{font-size:10.4px;color:var(--muted)}
+.row .v{font-weight:900;font-size:15px;color:var(--navy2)}
+.row .v.g{color:var(--green)}
+.note{margin-top:6px;background:var(--soft);border-radius:6px;padding:7px 10px;font-size:10.6px;line-height:1.45}
+.note b{color:var(--ink)}
+.dark{background:linear-gradient(135deg,#2b3180,#22276b);border-radius:10px;color:#fff;padding:14px 18px;position:relative}
+.dark .k{font-size:10.4px;font-weight:900;letter-spacing:2px;opacity:.9}
+.dark .tag{position:absolute;right:14px;top:11px;background:#2fbf5b;color:#fff;font-size:10px;font-weight:900;padding:4px 10px;border-radius:12px}
+.dark .big{display:flex;align-items:flex-end;gap:4px;margin:4px 0 2px}
+.dark .big sup{font-size:15px;font-weight:700;align-self:flex-start;margin-top:8px}
+.dark .big strong{font-size:44px;font-weight:900;line-height:1}
+.dark .big span{font-size:14px;font-weight:700;margin-bottom:5px;opacity:.95}
+.dark p{font-size:10.8px;opacity:.88}
+.dark .pay{margin-top:8px;background:rgba(255,255,255,.12);border-radius:6px;padding:6px 10px;font-size:10.8px}
+.dark .pay b{color:#7ee29a}
+.fine{text-align:right;font-size:9.6px;color:var(--muted);margin-top:6px}
+.foot{position:absolute;left:0;right:0;bottom:0;height:90px}
+.foot .a{position:absolute;left:0;bottom:0;width:330px;height:78px;background:var(--navy);clip-path:polygon(0 0,88% 0,100% 100%,0 100%)}
+.foot .b{position:absolute;left:220px;right:0;bottom:0;height:54px;background:#3e4596;clip-path:polygon(10% 0,100% 0,100% 100%,0 100%)}
+.foot .b::before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px}
+.foot .c{position:absolute;left:300px;right:28px;bottom:12px;display:flex;justify-content:flex-end;gap:18px;color:#fff;font-weight:900;font-size:14px;white-space:nowrap;align-items:center}
+.foot .c span{display:flex;align-items:center;gap:9px}
+.foot .c i{width:28px;height:28px;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center}
+.foot .c svg{width:17px;height:17px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.foot .line{position:absolute;left:236px;bottom:70px;width:110px;height:3px;background:#fff;transform:skewX(52deg);transform-origin:left}
+</style>
+</head>
+<body>
+<div class="page">
+  <img class="net" src="assets/net.png" alt="">
+  <img class="robot" src="assets/robot.png" alt="">
+  <img class="logo" src="assets/logo.png" alt="TGH Technology Solution">
+
+  <h1>PROPUESTA GESTIÓN DE REDES SOCIALES</h1>
+  <div class="pill">COMMUNITY MANAGER · PAQUETE PERSONALIZADO</div>
+
+  <div class="wrap">
+    <div class="meta">
+      <div><small>CLIENTE</small><b>Rapid (rapid.pe)</b></div>
+      <div><small>FECHA</small><b>12/10/2026</b></div>
+      <div><small>MODALIDAD</small><b>Servicio mensual</b></div>
+    </div>
+
+    <div class="sec">INTRODUCCIÓN</div>
+    <p class="intro">Gestionamos las redes sociales de <b>Rapid</b> con un equipo dedicado: estrategia orgánica, <b>8 piezas de contenido al mes</b>, producción audiovisual y <b>campañas de publicidad pagada</b> para fortalecer la marca, hacer crecer la comunidad y convertir seguidores en clientes.</p>
+
+    <div class="sec">¿QUÉ INCLUYE?</div>
+    <div class="grid">
+      <div class="box"><h3>Estrategia</h3><ul>
+        <li><span>Estrategia orgánica</span><em>Sí</em></li>
+        <li><span>Cronograma de contenido</span><em>Sí</em></li>
+        <li><span>Planificación de presupuesto en publicidad</span><em>Sí</em></li>
+      </ul></div>
+      <div class="box"><h3>Diseño</h3><ul>
+        <li><span>Portada de Facebook</span><em>Sí</em></li>
+        <li><span>Concepto creativo y línea gráfica digital</span><em>Sí</em></li>
+      </ul></div>
+      <div class="box"><h3>Gestión de redes sociales</h3><ul>
+        <li><span>Redes sociales a gestionar</span><em>3</em></li>
+        <li><span>Creación de contenido</span><em>8 al mes</em></li>
+        <li><span>Monitoreo</span><em>L-V 8 a.m. a 6 p.m.</em></li>
+      </ul></div>
+      <div class="box"><h3>Producción</h3><ul>
+        <li><span>Visitas al cliente</span><em>2 al mes</em></li>
+        <li><span>Edición de videos</span><em>8 al mes</em></li>
+        <li><span>Horario de grabación</span><em>L-V 8 a.m.-6 p.m. · S 9 a.m.-1 p.m.</em></li>
+      </ul></div>
+      <div class="box"><h3>Publicidad pagada</h3><ul>
+        <li><span>Propuesta de estrategia de pauta*</span><em>Sí</em></li>
+        <li><span>Ejecución de campañas</span><em>Ilimitadas</em></li>
+        <li><span>Reporte de campañas</span><em>Sí</em></li>
+      </ul></div>
+      <div class="box"><h3>Reporte</h3><ul>
+        <li><span>Reporte de cumplimiento</span><em>Mensual</em></li>
+      </ul></div>
+    </div>
+
+    <div class="sec">EQUIPO DEDICADO A LA MARCA</div>
+    <div class="team">
+      <div class="tm"><b>1</b><span>Coordinador de Marketing</span></div>
+      <div class="tm"><b>1</b><span>Trafficker Digital</span></div>
+      <div class="tm"><b>2</b><span>Comunicadores Audiovisuales</span></div>
+      <div class="tm"><b>1</b><span>Diseñador(a) Gráfico(a)</span></div>
+      <div class="tm"><b>1</b><span>Community Manager</span></div>
+    </div>
+
+    <div class="price">
+      <div class="inv">
+        <h4>INVERSIÓN MENSUAL</h4>
+        <div class="row"><div><b>Paquete personalizado</b><small>Precio sin IGV</small></div><div class="v g">S/ 1,250.00</div></div>
+        <div class="row"><div><b>IGV (18%)</b></div><div class="v">S/ 225.00</div></div>
+        <div class="row" style="border-bottom:none"><div><b>Total mensual con IGV</b></div><div class="v">S/ 1,475.00</div></div>
+        <div class="note"><b>*No incluye</b> el presupuesto de pauta (pagado directamente a Meta/TikTok). El cliente envía los recursos para la publicidad pagada.</div>
+      </div>
+      <div>
+        <div class="dark">
+          <div class="k">PAQUETE PERSONALIZADO</div>
+          <span class="tag">EQUIPO DE 6</span>
+          <div class="big"><sup>S/</sup><strong>1,250</strong><span>/ mes + IGV</span></div>
+          <p>Gestión de 3 redes · 8 contenidos · 8 videos · 2 visitas</p>
+          <div class="pay">Forma de pago: <b>100% adelantado</b> antes del inicio del servicio.</div>
+        </div>
+        <p class="fine">Precios en soles · No incluye IGV ni pauta · Válida 15 días</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="a"></div><div class="b"></div>
+    <div class="c">
+      <span><i><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg></i>976 - 224 - 095</span>
+      <span><i><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></i>administracion@tghtechnologysolution.com</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
