@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Brochure TGH Marketing</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --navy:#0d0634; --navy2:#140a4a; --blue:#0b2a7a; --cyan:#1cc6ee; --cyan2:#00e0ff;
+  --green:#3be35c; --pill:#1747c4; --white:#fff; --muted:#c9cdf2;
+}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--navy)}
+body{font-family:'Poppins',sans-serif;color:var(--white);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:1920px;height:1080px;position:relative;overflow:hidden;page-break-after:always;
+  background:radial-gradient(1200px 800px at 100% 0%,#13307f 0%,transparent 60%),
+             radial-gradient(900px 700px at 0% 100%,#22105e 0%,transparent 60%),
+             linear-gradient(135deg,#0b0532 0%,#120847 55%,#0c1a5e 100%)}
+.waves{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.logo{position:absolute;top:56px;right:70px;width:360px}
+.logo.left{right:auto;left:70px}
+h1,h2,h3,.disp{font-family:'Montserrat',sans-serif;font-weight:900;font-style:italic;text-transform:uppercase;line-height:.98;letter-spacing:-.5px}
+.c{color:var(--cyan)}
+.pill{display:inline-block;background:#fff;color:var(--navy2);font-family:'Montserrat';font-style:italic;font-weight:800;
+  font-size:58px;padding:22px 70px 22px 110px;border-radius:0 60px 60px 0;position:absolute;left:0;top:120px}
+.footer{position:absolute;left:0;right:0;bottom:0;height:72px;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
+  font-family:'Montserrat';font-weight:600;font-size:30px}
+.footer b{color:var(--navy2);font-weight:800;margin-left:10px}
+.slant{position:absolute;top:0;bottom:0;background-size:cover;background-position:center;border-left:14px solid #fff;border-right:14px solid #fff}
+.plus{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--green);color:#0b0532;font-weight:900;
+  align-items:center;justify-content:center;font-size:26px;line-height:1;font-family:'Montserrat';font-style:normal}
+p.lead{font-size:34px;line-height:1.38;color:#eef0ff}
+.circuit{position:absolute;width:420px;height:420px;opacity:.55}
+
+/* COVER */
+.cover h1{position:absolute;left:110px;top:250px;font-size:100px;font-style:normal;width:1100px}
+.cover .tag{position:absolute;left:112px;top:620px;font-size:36px;line-height:1.45;width:1080px}
+.cover .tag b{color:var(--cyan);font-weight:600}
+.cover .biglogo{position:absolute;right:80px;top:390px;width:560px}
+.cover .badge{position:absolute;left:112px;top:830px;display:flex;gap:18px}
+.chip{border:2px solid var(--cyan);color:var(--cyan);border-radius:40px;padding:12px 30px;font-weight:600;font-size:26px;letter-spacing:.5px}
+
+/* ABOUT */
+.about .txt{position:absolute;left:110px;top:300px;width:820px}
+.about .txt h2{font-size:92px;margin-bottom:34px}
+.about .cards{position:absolute;right:110px;top:250px;width:800px;display:grid;gap:30px}
+.card{background:rgba(6,3,30,.62);border:1px solid rgba(28,198,238,.25);border-radius:40px;padding:42px 50px}
+.card h3{font-size:52px;color:var(--cyan);font-style:normal;margin-bottom:14px}
+.card p{font-size:28px;line-height:1.42}
+
+/* HELP */
+.help h2{position:absolute;left:110px;top:120px;font-size:96px}
+.help .sub{position:absolute;left:112px;top:350px;width:1300px;font-size:32px;line-height:1.4;color:#e6e8ff}
+.steps{position:absolute;left:110px;right:110px;top:520px;display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+.step{background:rgba(6,3,30,.6);border-radius:36px;padding:44px 38px 40px;border-top:6px solid var(--cyan);min-height:420px}
+.step .n{font-family:'Montserrat';font-weight:900;font-style:italic;font-size:86px;color:var(--cyan);line-height:1;opacity:.95}
+.step h3{font-size:40px;margin:16px 0 18px}
+.step p{font-size:25px;line-height:1.45;color:#dfe2ff}
+
+/* DIVIDER */
+.divider h1{position:absolute;left:0;right:0;top:390px;text-align:center;font-size:150px;font-style:normal}
+.divider h1 span{display:block;font-style:italic}
+
+/* SERVICES split */
+.split .l,.split .r{position:absolute;top:0;bottom:72px;width:580px;display:flex;flex-direction:column;justify-content:center}
+.split .l{left:70px}
+.split .r{right:70px;text-align:right;align-items:flex-end}
+.split h2{font-size:80px;margin-bottom:30px}
+.split p{font-size:31px;line-height:1.42;max-width:580px}
+.list{margin-top:36px;display:flex;flex-direction:column;gap:6px;align-items:center;width:600px}
+.split .r .list{align-self:flex-end}
+.list span.t{font-family:'Poppins';font-weight:600;color:var(--cyan);font-size:31px;text-align:center}
+
+/* CREATOR */
+.creator .ribbon{position:absolute;left:110px;top:150px;background:var(--green);color:#0b0532;font-family:'Montserrat';font-weight:900;font-style:italic;
+  font-size:30px;padding:12px 30px;border-radius:40px;letter-spacing:1px}
+.creator h2{position:absolute;left:110px;top:230px;font-size:86px;width:1050px}
+.creator .desc{position:absolute;left:112px;top:520px;width:900px;font-size:31px;line-height:1.45}
+.creator .feats{position:absolute;left:112px;top:760px;width:960px;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px}
+.feat{display:flex;gap:16px;align-items:center;font-size:28px;font-weight:600;color:var(--cyan)}
+.creator .photo{position:absolute;right:0;top:0;bottom:0;width:760px;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);background-size:cover;background-position:center}
+.creator .photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,6,52,.85))}
+.creator .edge{position:absolute;right:0;top:0;bottom:0;width:760px;clip-path:polygon(22% 0,calc(22% + 14px) 0,14px 100%,0 100%);background:#fff}
+.creator .quote{position:absolute;left:112px;bottom:60px;width:1100px;font-size:32px !important;text-align:left;font-family:'Montserrat';font-weight:800;font-style:italic;font-size:40px;line-height:1.15;z-index:2}
+
+.phone{position:absolute;right:250px;top:110px;width:430px;height:860px;border-radius:64px;background:#0a0a14;padding:16px;box-shadow:0 40px 80px rgba(0,0,0,.55),0 0 0 3px #2a2f5c}
+.phone .screen{position:relative;width:100%;height:100%;border-radius:50px;background-size:cover;background-position:center;overflow:hidden}
+.phone .screen::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 25%,transparent 60%,rgba(0,0,0,.75))}
+.phone .rec{position:absolute;top:34px;left:28px;z-index:2;font:700 22px Montserrat;display:flex;gap:10px;align-items:center}
+.phone .rec i{width:16px;height:16px;border-radius:50%;background:#ff3b5c;display:block}
+.phone .handle{position:absolute;top:32px;right:28px;z-index:2;font:600 22px Poppins}
+.phone .side{position:absolute;right:22px;bottom:200px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:40px}
+.phone .side small{font-size:18px;font-weight:600;margin-bottom:14px}
+.phone .cap{position:absolute;left:28px;bottom:50px;right:90px;z-index:2;font-size:22px;line-height:1.4}
+.creator .quote{z-index:3}
+/* BENEFITS */
+.benefits h2{position:absolute;left:110px;top:130px;font-size:96px}
+.bgrid{position:absolute;left:110px;right:110px;top:380px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.b{background:rgba(6,3,30,.6);border-radius:32px;padding:38px 40px;border:1px solid rgba(28,198,238,.22);min-height:270px}
+.b.hl{background:linear-gradient(135deg,#1747c4,#0b8fc7);border:none}
+.b .ico{width:64px;height:64px;border-radius:18px;background:rgba(28,198,238,.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.b.hl .ico{background:rgba(255,255,255,.2)}
+.b h3{font-size:34px;font-style:normal;margin-bottom:12px}
+.b p{font-size:24px;line-height:1.45;color:#dfe2ff}
+.b.hl p{color:#fff}
+
+/* PLANS */
+.plans h2{position:absolute;left:110px;top:90px;font-size:90px}
+.plans .sub{position:absolute;left:112px;top:205px;font-size:30px;color:#dfe2ff}
+.pgrid{position:absolute;left:110px;right:110px;top:270px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.plan{background:#fff;color:#14123a;border-radius:36px;padding:0 0 22px;overflow:hidden;position:relative}
+.plan .hd{background:var(--pill);color:#fff;padding:24px 36px 20px;min-height:178px}
+.plan.mid .hd{background:linear-gradient(90deg,#1747c4,#11a7d6)}
+.plan .hd h3{font-size:42px;font-style:normal}
+.plan .hd p{font-size:21px;margin-top:6px;opacity:.95;font-style:italic}
+.plan ul{list-style:none;padding:18px 34px 0}
+.plan li{font-size:20px;line-height:1.32;padding:3px 0 3px 28px;position:relative;font-weight:500}
+.plan li::before{content:"";position:absolute;left:4px;top:13px;width:12px;height:12px;border-radius:50%;background:var(--cyan)}
+.plan li.star{color:#1747c4;font-weight:600}
+.plan li.star::before{background:var(--green)}
+.plan .tagtop{display:inline-block;margin-bottom:8px;background:var(--green);color:#0b0532;font-weight:700;font-size:17px;padding:6px 14px;border-radius:20px;font-family:'Montserrat'}
+
+/* CONTACT */
+.contact h1{position:absolute;left:160px;right:160px;top:200px;text-align:center;font-size:76px;font-style:normal}
+.clist{position:absolute;left:520px;top:450px;display:flex;flex-direction:column;gap:38px}
+.crow{display:flex;align-items:center;gap:30px;font-size:40px}
+.crow .ic{width:84px;height:84px;border-radius:14px;background:var(--cyan);display:flex;align-items:center;justify-content:center;flex:none}
+.crow small{display:block;font-size:40px;line-height:1.25}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <svg class="waves" data-waves="cover"></svg>
+  <h1>MARKETING QUE <span class="c">IMPULSA TU MARCA</span></h1>
+  <p class="tag">En <b>TGH Technology Solution</b> creamos estrategias, contenido y campañas que conectan tu marca con las personas correctas y la hacen crecer.</p>
+  <div class="badge"><span class="chip">REDES SOCIALES</span><span class="chip">CONTENIDO</span><span class="chip">PUBLICIDAD</span><span class="chip">BRANDING</span></div>
+  <img class="biglogo" src="assets/logo.png" alt="TGH Technology Solution">
+</section>
+
+<!-- 2 ABOUT -->
+<section class="page about">
+  <svg class="waves" data-waves="soft"></svg>
+  <img class="logo" src="assets/logo.png" alt="">
+  <div class="pill">¿Quiénes somos?</div>
+  <div class="txt" style="top:330px">
+    <h2>TU AGENCIA <span class="c">DE MARKETING DIGITAL</span></h2>
+    <p class="lead">Somos un equipo de estrategas, creativos, diseñadores y realizadores audiovisuales que convierte marcas en referentes dentro de sus redes.</p>
+    <p class="lead" style="margin-top:22px">Planificamos, creamos y medimos: cada publicación y cada campaña tiene un objetivo claro, <span class="c" style="font-weight:600">hacer crecer tu negocio.</span></p>
+  </div>
+  <div class="cards" style="top:300px">
+    <div class="card"><h3>MISIÓN</h3><p>Ser el socio estratégico de nuestros clientes, aportando soluciones creativas, innovadoras y personalizadas que fortalezcan su marca y generen resultados reales.</p></div>
+    <div class="card"><h3>VISIÓN</h3><p>Ser reconocidos como una agencia líder en marketing digital y creación de contenido, por la calidad de nuestro trabajo y el crecimiento de las marcas que acompañamos.</p></div>
+  </div>
+  
+</section>
+
+<!-- 3 HOW WE HELP -->
+<section class="page help">
+  <svg class="waves" data-waves="soft"></svg>
+  <img class="logo" src="assets/logo.png" alt="">
+  <h2>¿CÓMO PODEMOS<br><span class="c">AYUDARTE?</span></h2>
+  <p class="sub">Si tu marca publica sin estrategia, no logra interacción o sus anuncios no venden, te acompañamos en todo el proceso:</p>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>DIAGNÓSTICO</h3><p>Analizamos tu marca, tu público y tu competencia (benchmarking) para saber dónde estás y a dónde puedes llegar.</p></div>
+    <div class="step"><div class="n">02</div><h3>ESTRATEGIA</h3><p>Definimos objetivos, calendario de contenido mensual y el presupuesto ideal a invertir en redes.</p></div>
+    <div class="step"><div class="n">03</div><h3>CREACIÓN</h3><p>Producimos posts, videos, fotografía y copywriting optimizado, con una creadora de contenido que le da rostro a tu marca.</p></div>
+    <div class="step"><div class="n">04</div><h3>RESULTADOS</h3><p>Lanzamos campañas, gestionamos tu comunidad y te entregamos reportes con sugerencias de mejora.</p></div>
+  </div>
+</section>
+
+<!-- 4 DIVIDER -->
+<section class="page divider">
+  <svg class="circuit" style="left:-30px;top:-30px;transform:scaleX(-1) scaleY(-1)" data-circuit="2"></svg>
+  <svg class="circuit" style="right:-30px;bottom:-30px" data-circuit="3"></svg>
+  <h1>TE OFRECEMOS <span class="c">SOLUCIONES CREATIVAS</span></h1>
+</section>
+
+<!-- 5 SERVICES A -->
+<section class="page split">
+  <svg class="waves" data-waves="soft"></svg>
+  <div class="slant" style="left:790px;width:340px;transform:skewX(-14deg);background-image:url(assets/social.jpg)"></div>
+  <img class="logo left" src="assets/logo.png" alt="" style="top:56px">
+  <div class="l" style="justify-content:flex-end;padding-bottom:110px">
+    <h2>PUBLICIDAD <span class="c">DIGITAL:</span></h2>
+    <p>Gestión de campañas en Meta Ads (Facebook e Instagram), TikTok y Google Ads para aumentar tu visibilidad, generar tráfico y convertir leads en clientes.</p>
+  </div>
+  <div class="r" style="justify-content:flex-start;padding-top:200px">
+    <h2>COMMUNITY <span class="c">MANAGER:</span></h2>
+    <p>Gestionamos tus redes, creamos contenido, interactuamos con tu audiencia y hacemos crecer tus seguidores y su participación.</p>
+  </div>
+  <div class="footer">Visita nuestro portafolio aquí: <b>https://www.behance.net/tghtechnology</b></div>
+</section>
+
+<!-- 6 SERVICES B -->
+<section class="page split">
+  <svg class="waves" data-waves="soft"></svg>
+  <div class="slant" style="left:790px;width:340px;transform:skewX(-14deg);background-image:url(assets/camera.jpg)"></div>
+  <img class="logo left" src="assets/logo.png" alt="">
+  <div class="l" style="justify-content:flex-end;padding-bottom:110px">
+    <h2 style="font-size:72px">FOTOGRAFÍA <span class="c">Y VIDEO:</span></h2>
+    <p>Producción de contenido visual para redes, web y catálogos: sesiones de producto, reels y visitas a tu local para capturar la esencia de tu marca.</p>
+  </div>
+  <div class="r" style="justify-content:flex-start;padding-top:200px">
+    <h2 class="c" style="font-size:66px">MERCHANDISING:</h2>
+    <p>Diseño y producción de artículos con tu logo para aumentar la visibilidad de tu marca y fidelizar a tus clientes.</p>
+  </div>
+  <div class="footer">Visita nuestro portafolio aquí: <b>https://www.behance.net/tghtechnology</b></div>
+</section>
+
+<!-- 7 SERVICES C -->
+<section class="page split">
+  <svg class="waves" data-waves="soft"></svg>
+  <div class="slant" style="left:790px;width:340px;transform:skewX(-14deg);background-image:url(assets/catalog.jpg)"></div>
+  <img class="logo" src="assets/logo.png" alt="">
+  <div class="l" style="justify-content:flex-start;padding-top:190px">
+    <h2>IDENTIDAD <span class="c">DE MARCA:</span></h2>
+    <p>Creamos tu manual de marca con pautas de uso de logotipo, colores y tipografías para que tu comunicación sea siempre consistente.</p>
+  </div>
+  <div class="r" style="justify-content:flex-end;padding-bottom:110px">
+    <h2>BROCHURE / <span class="c">CATÁLOGO:</span></h2>
+    <p>Materiales impresos o digitales para presentar tus productos y atraer clientes en ferias, reuniones y redes.</p>
+  </div>
+  <div class="footer">Visita nuestro portafolio aquí: <b>https://www.behance.net/tghtechnology</b></div>
+</section>
+
+<!-- 8 CREATOR -->
+<section class="page creator">
+  <svg class="waves" data-waves="soft"></svg>
+  <div class="slant" style="left:1300px;width:900px;transform:skewX(-14deg);background:linear-gradient(160deg,#1747c4,#0b8fc7 60%,#1cc6ee)"></div>
+  <div class="phone"><div class="screen" style="background-image:url(assets/camera.jpg)">
+    <div class="rec"><i></i>REC</div><div class="handle">@tumarca</div>
+    <div class="side"><span>♥</span><small>12,4K</small><span>💬</span><small>865</small><span>➤</span></div>
+    <div class="cap"><b>Creadora TGH</b><br>Probando lo nuevo de #TuMarca ✨</div>
+  </div></div>
+  <img class="logo left" src="assets/logo.png" alt="" style="width:300px;top:40px">
+  <div class="ribbon">★ BENEFICIO EXCLUSIVO TGH</div>
+  <h2>UNA CREADORA DE CONTENIDO <span class="c">PARA TU MARCA</span></h2>
+  <p class="desc">Te brindamos una creadora de contenido que <b class="c">castea tu marca</b>: le pone rostro, voz y personalidad a tus productos y servicios para que tu audiencia confíe en ti y quiera comprarte.</p>
+  <div class="feats">
+    <div class="feat"><span class="plus">+</span>Reels y TikToks con presencia real</div>
+    <div class="feat"><span class="plus">+</span>Reseñas y demostraciones de producto</div>
+    <div class="feat"><span class="plus">+</span>Contenido grabado en tu local</div>
+    <div class="feat"><span class="plus">+</span>Unboxing, tendencias y testimonios</div>
+  </div>
+  <div class="quote">LAS PERSONAS CONECTAN CON <span class="c">PERSONAS</span>, NO CON LOGOS.</div>
+</section>
+
+<!-- 9 BENEFITS -->
+<section class="page benefits">
+  <svg class="waves" data-waves="soft"></svg>
+  <img class="logo" src="assets/logo.png" alt="">
+  <h2>¿POR QUÉ <span class="c">ELEGIRNOS?</span></h2>
+  <div class="bgrid">
+    <div class="b hl"><div class="ico" data-icon="star"></div><h3>Creadora de contenido</h3><p>Tu marca con rostro propio: una creadora que protagoniza tu contenido y genera confianza.</p></div>
+    <div class="b"><div class="ico" data-icon="cal"></div><h3>Estrategia a medida</h3><p>Calendario de contenido mensual y planificación del presupuesto a invertir en redes.</p></div>
+    <div class="b"><div class="ico" data-icon="cam"></div><h3>Producción en tu local</h3><p>Visitamos tu negocio para capturar fotos y videos reales de tus productos y tu equipo.</p></div>
+    <div class="b"><div class="ico" data-icon="pen"></div><h3>Copywriting optimizado</h3><p>Textos que conectan, posicionan y venden, adaptados a cada red social.</p></div>
+    <div class="b"><div class="ico" data-icon="chat"></div><h3>Comunidad atendida</h3><p>Respondemos mensajes y comentarios con monitoreo de lunes a viernes de 8 a.m. a 6 p.m.</p></div>
+    <div class="b"><div class="ico" data-icon="chart"></div><h3>Resultados medibles</h3><p>Reportes mensuales detallados con sugerencias de mejora para crecer mes a mes.</p></div>
+  </div>
+</section>
+
+<!-- 10 PLANS -->
+<section class="page plans">
+  <svg class="waves" data-waves="soft"></svg>
+  <img class="logo" src="assets/logo.png" alt="">
+  <h2>NUESTROS <span class="c">PLANES</span></h2>
+  <p class="sub">Manejo de redes en Facebook, Instagram y TikTok, según la etapa de tu marca.</p>
+  <div class="pgrid">
+    <div class="plan"><div class="hd"><h3>PLAN BÁSICO</h3><p>Para comenzar a posicionar tu marca en redes.</p></div>
+      <ul>
+        <li>12 publicaciones mensuales (7 posts + 4 videos)</li>
+        <li>Planificación de presupuesto a invertir en redes</li>
+        <li>Rediseño de portada (opcional)</li>
+        <li>Calendario de contenido mensual</li>
+        <li>Copywriting optimizado</li>
+        <li>Respuesta de mensajes y comentarios</li>
+        <li>Monitoreo L-V de 8 a.m. a 6 p.m.</li>
+        <li>1 campaña al mes (activación mensual)</li>
+        <li>1 visita al local al mes (fotos/videos)</li>
+        <li>1 reunión virtual al mes</li>
+      </ul></div>
+    <div class="plan mid"><div class="hd"><span class="tagtop">MÁS ELEGIDO</span><h3>PLAN INTERMEDIO</h3><p>Más contenido, análisis y campañas quincenales.</p></div>
+      <ul>
+        <li>Análisis de la marca + benchmarking</li>
+        <li>17 publicaciones mensuales (10 posts + 7 videos)</li>
+        <li>Planificación de presupuesto a invertir en redes</li>
+        <li>Rediseño de portada (opcional)</li>
+        <li>Calendario de contenido mensual</li>
+        <li>Respuesta de mensajes y comentarios</li>
+        <li>Monitoreo L-V de 8 a.m. a 6 p.m.</li>
+        <li>Reporte mensual + sugerencias de mejora</li>
+        <li>2 campañas al mes (activación quincenal)</li>
+        <li>2 visitas al local al mes (fotos/videos)</li>
+      </ul></div>
+    <div class="plan"><div class="hd"><h3>PLAN PREMIUM</h3><p>Gestión completa y estrategias avanzadas.</p></div>
+      <ul>
+        <li>Análisis de la competencia</li>
+        <li>25 publicaciones mensuales (13 posts + 12 videos)</li>
+        <li>Planificación de presupuesto a invertir en redes</li>
+        <li>Rediseño de portada (opcional)</li>
+        <li>Calendario de contenido mensual</li>
+        <li>Respuesta de mensajes y comentarios</li>
+        <li>Monitoreo L-V de 8 a.m. a 6 p.m.</li>
+        <li>Reporte mensual + sugerencias de mejora</li>
+        <li>3 campañas al mes (activación diaria)</li>
+        <li>3 visitas al local al mes (fotos/videos)</li>
+      </ul></div>
+  </div>
+  <div style="position:absolute;left:110px;right:110px;bottom:40px;text-align:center;font-size:27px;font-weight:600">
+    <span class="plus" style="vertical-align:middle;margin-right:12px">+</span>Potencia cualquier plan con nuestra <span class="c">creadora de contenido</span> para castear tu marca.
+  </div>
+</section>
+
+<!-- 11 CONTACT -->
+<section class="page contact">
+  <svg class="waves" data-waves="contact"></svg>
+  <h1>¡CONTÁCTANOS Y HAZ CRECER <span class="c">TU MARCA HOY!</span></h1>
+  <div class="clist">
+    <div class="crow"><div class="ic" data-icon="mail"></div><div><small>alex.lara@tghtechnologysolution.com</small><small>administracion@tghtechnologysolution.com</small></div></div>
+    <div class="crow"><div class="ic" data-icon="fb"></div><div>TGH Technology Solution</div></div>
+    <div class="crow"><div class="ic" data-icon="web"></div><div><small>https://agenciatgh.pe/</small><small style="font-size:30px;color:#c9cdf2">Portafolio: behance.net/tghtechnology</small></div></div>
+    <div class="crow"><div class="ic" data-icon="wa"></div><div>993 584 224 &nbsp;/&nbsp; 976 224 095</div></div>
+  </div>
+  <img src="assets/logo.png" alt="" style="position:absolute;right:70px;bottom:50px;width:300px;opacity:.9">
+</section>
+
+<script>
+// sinuous line-bundle waves like the original brochure
+const NS='http://www.w3.org/2000/svg';
+function bundle(svg,{y0,amp,len,phase,color,n,spread,op}){
+  for(let i=0;i<n;i++){
+    const p=document.createElementNS(NS,'path');let d='';
+    const a=amp*(1+i/n*.6), off=y0+i*spread, ph=phase+i*.035;
+    for(let x=-50;x<=1970;x+=20){const y=off+a*Math.sin(x/len+ph)+a*.4*Math.sin(x/(len*.47)+ph*1.7);d+=(x<0?'M':'L')+x+' '+y.toFixed(1)}
+    p.setAttribute('d',d);p.setAttribute('fill','none');p.setAttribute('stroke',color);p.setAttribute('stroke-width','1.1');p.setAttribute('opacity',op);svg.appendChild(p);
+  }
+}
+document.querySelectorAll('svg.waves').forEach(svg=>{
+  svg.setAttribute('viewBox','0 0 1920 1080');svg.setAttribute('preserveAspectRatio','none');
+  const t=svg.dataset.waves;
+  if(t==='cover'){bundle(svg,{y0:40,amp:150,len:260,phase:0,color:'#6a4fd8',n:60,spread:3,op:.28});bundle(svg,{y0:880,amp:120,len:300,phase:2,color:'#3d6fe0',n:50,spread:3,op:.22})}
+  else if(t==='contact'){bundle(svg,{y0:60,amp:140,len:180,phase:1,color:'#1cc6ee',n:26,spread:5,op:.55});bundle(svg,{y0:960,amp:120,len:200,phase:3,color:'#1cc6ee',n:26,spread:5,op:.5})}
+  else{bundle(svg,{y0:120,amp:110,len:300,phase:.5,color:'#6a4fd8',n:40,spread:3,op:.18});bundle(svg,{y0:840,amp:90,len:340,phase:2.4,color:'#3d6fe0',n:35,spread:3,op:.15})}
+});
+// circuit traces
+document.querySelectorAll('svg.circuit').forEach(svg=>{
+  svg.setAttribute('viewBox','0 0 420 420');let s='';
+  for(let i=0;i<12;i++){const x=420-i*26, y=420-i*8;s+=`<path d="M${x} 420 L${x} ${300-i*14} L${x-90} ${190-i*12}" stroke="#1cc6ee" stroke-width="2" fill="none" opacity=".6"/><circle cx="${x-90}" cy="${190-i*12}" r="7" fill="#1cc6ee" opacity=".8"/>`}
+  svg.innerHTML=s;
+});
+// icons
+const I={
+ star:'<path d="M12 2l3 6.6 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.3l7-.7z"/>',
+ cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+ cam:'<rect x="2" y="7" width="20" height="14" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M8 7l2-3h4l2 3"/>',
+ pen:'<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>',
+ chat:'<path d="M4 4h16v12H8l-4 4z"/>',
+ chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+ mail:'<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 6l10 7 10-7"/>',
+ fb:'<path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8z" fill="#fff" stroke="none"/>',
+ web:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>',
+ wa:'<path d="M4 20l1.3-4A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4-1z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1c-1.2-.5-2.4-1.7-2.9-2.9l1-1-1-2z" fill="#fff" stroke="none"/>'
+};
+document.querySelectorAll('[data-icon]').forEach(el=>{
+  const big=el.classList.contains('ic');const c=big?'#fff':'#1cc6ee';const parentHl=el.closest('.hl');
+  el.innerHTML=`<svg viewBox="0 0 24 24" width="${big?50:36}" height="${big?50:36}" fill="none" stroke="${parentHl?'#fff':c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[el.dataset.icon]}</svg>`;
+});
+</script>
+</body>
+</html>
