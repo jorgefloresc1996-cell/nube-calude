@@ -2,372 +2,305 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Brochure TGH Marketing</title>
+<title>Brochure Agencia TGH</title>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root{
-  --navy:#0d0634; --navy2:#140a4a; --blue:#0b2a7a; --cyan:#1cc6ee; --cyan2:#00e0ff;
-  --green:#3be35c; --pill:#1747c4; --white:#fff; --muted:#c9cdf2;
+  --bg:#000; --card:#0c0c0c; --card2:#141414; --line:#262626; --line2:#3a3a3a;
+  --text:#fff; --muted:#9a9a9a; --soft:#c9c9c9; --red:#ef3b3b; --green:#22c55e;
 }
 @page{size:1920px 1080px;margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--navy)}
-body{font-family:'Poppins',sans-serif;color:var(--white);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{background:#000}
+body{font-family:'Cabin',sans-serif;color:var(--text);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:1920px;height:1080px;position:relative;overflow:hidden;page-break-after:always;
-  background:radial-gradient(1200px 800px at 100% 0%,#13307f 0%,transparent 60%),
-             radial-gradient(900px 700px at 0% 100%,#22105e 0%,transparent 60%),
-             linear-gradient(135deg,#0b0532 0%,#120847 55%,#0c1a5e 100%)}
-.waves{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.logo{position:absolute;top:56px;right:70px;width:360px}
-.logo.left{right:auto;left:70px}
-h1,h2,h3,.disp{font-family:'Montserrat',sans-serif;font-weight:900;font-style:italic;text-transform:uppercase;line-height:.98;letter-spacing:-.5px}
-.c{color:var(--cyan)}
-.pill{display:inline-block;background:#fff;color:var(--navy2);font-family:'Montserrat';font-style:italic;font-weight:800;
-  font-size:58px;padding:22px 70px 22px 110px;border-radius:0 60px 60px 0;position:absolute;left:0;top:120px}
-.footer{position:absolute;left:0;right:0;bottom:0;height:72px;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
-  font-family:'Montserrat';font-weight:600;font-size:30px}
-.footer b{color:var(--navy2);font-weight:800;margin-left:10px}
-.slant{position:absolute;top:0;bottom:0;background-size:cover;background-position:center;border-left:14px solid #fff;border-right:14px solid #fff}
-.plus{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--green);color:#0b0532;font-weight:900;
-  align-items:center;justify-content:center;font-size:26px;line-height:1;font-family:'Montserrat';font-style:normal}
-p.lead{font-size:34px;line-height:1.38;color:#eef0ff}
-.circuit{position:absolute;width:420px;height:420px;opacity:.55}
+  background:radial-gradient(1100px 700px at 30% 35%,#121212 0%,#000 70%)}
+.stars{position:absolute;inset:0;pointer-events:none}
+.top{position:absolute;left:150px;right:150px;top:56px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+.top img{height:70px}
+.top .pg{border:1px solid var(--line2);border-radius:40px;padding:10px 26px;font-weight:600;font-size:22px;color:var(--soft);background:#0a0a0a}
+.top .pg b{color:#fff}
+h1,h2{font-family:'Poppins',sans-serif;font-weight:800;letter-spacing:-3px;line-height:1.02;
+  text-shadow:0 0 40px rgba(255,255,255,.28),0 0 90px rgba(255,255,255,.12)}
+.s{font-family:'Yellowtail',cursive;font-weight:400;letter-spacing:0;font-size:1.12em;line-height:.9;padding-right:.08em}
+.g{color:#7a7a7a;text-shadow:none}
+.tag{display:inline-block;background:#fff;color:#000;font-weight:700;font-size:20px;letter-spacing:1px;padding:8px 20px;border-radius:30px;text-transform:uppercase}
+.lead{font-size:30px;line-height:1.5;color:var(--muted)}
+.lead b{color:#fff;font-weight:600}
+.card{background:linear-gradient(180deg,#111 0%,#0a0a0a 100%);border:1px solid var(--line);border-radius:32px}
+.ico{width:72px;height:72px;border-radius:16px;background:#1b1b1b;border:1px solid #2c2c2c;display:flex;align-items:center;justify-content:center}
+.ico svg{width:36px;height:36px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pill{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--line2);background:#111;border-radius:40px;padding:14px 28px;font-weight:600;font-size:24px}
+.btn{display:inline-flex;align-items:center;gap:14px;background:#fff;color:#000;border-radius:50px;padding:22px 46px;font-weight:600;font-size:28px}
+.bul{list-style:none}
+.bul li{position:relative;padding-left:34px;font-size:27px;font-weight:600;margin:14px 0}
+.bul li::before{content:"";position:absolute;left:0;top:12px;width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 10px rgba(255,255,255,.6)}
+.foot{position:absolute;left:150px;right:150px;bottom:44px;display:flex;justify-content:space-between;font-size:19px;color:#5e5e5e;letter-spacing:2px;text-transform:uppercase}
 
-/* COVER */
-.cover h1{position:absolute;left:110px;top:250px;font-size:100px;font-style:normal;width:1100px}
-.cover .tag{position:absolute;left:112px;top:620px;font-size:36px;line-height:1.45;width:1080px}
-.cover .tag b{color:var(--cyan);font-weight:600}
-.cover .biglogo{position:absolute;right:80px;top:390px;width:560px}
-.cover .badge{position:absolute;left:112px;top:830px;display:flex;gap:18px}
-.chip{border:2px solid var(--cyan);color:var(--cyan);border-radius:40px;padding:12px 30px;font-weight:600;font-size:26px;letter-spacing:.5px}
+/* cover */
+.cover .lion{position:absolute;right:0;top:0;bottom:0;width:900px;background:url(assets/lion.jpg) right 55%/auto 115% no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%);mask-image:linear-gradient(90deg,transparent 0%,#000 45%);opacity:.9}
+.cover .partners{position:absolute;left:150px;top:220px;display:flex;gap:18px}
+.cover h1{position:absolute;left:150px;top:300px;font-size:118px;width:1150px}
+.cover .lead{position:absolute;left:152px;top:720px;width:960px;font-size:28px}
+.cover .yr{position:absolute;right:150px;bottom:60px;font-size:22px;color:#777;letter-spacing:4px}
 
-/* ABOUT */
-.about .txt{position:absolute;left:110px;top:300px;width:820px}
-.about .txt h2{font-size:92px;margin-bottom:34px}
-.about .cards{position:absolute;right:110px;top:250px;width:800px;display:grid;gap:30px}
-.card{background:rgba(6,3,30,.62);border:1px solid rgba(28,198,238,.25);border-radius:40px;padding:42px 50px}
-.card h3{font-size:52px;color:var(--cyan);font-style:normal;margin-bottom:14px}
-.card p{font-size:28px;line-height:1.42}
+/* about */
+.about h2{position:absolute;left:150px;top:230px;font-size:120px}
+.about .lead{position:absolute;left:152px;top:540px;width:820px}
+.about .cards{position:absolute;right:150px;top:220px;width:720px;display:flex;flex-direction:column;gap:26px}
+.about .card{padding:36px 42px}
+.about .card h3{font-family:'Poppins';font-weight:700;font-size:34px;margin:18px 0 10px;letter-spacing:-.5px}
+.about .card p{font-size:24px;line-height:1.5;color:var(--muted)}
+.row{display:flex;gap:22px;align-items:center}
 
-/* HELP */
-.help h2{position:absolute;left:110px;top:120px;font-size:96px}
-.help .sub{position:absolute;left:112px;top:350px;width:1300px;font-size:32px;line-height:1.4;color:#e6e8ff}
-.steps{position:absolute;left:110px;right:110px;top:520px;display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
-.step{background:rgba(6,3,30,.6);border-radius:36px;padding:44px 38px 40px;border-top:6px solid var(--cyan);min-height:420px}
-.step .n{font-family:'Montserrat';font-weight:900;font-style:italic;font-size:86px;color:var(--cyan);line-height:1;opacity:.95}
-.step h3{font-size:40px;margin:16px 0 18px}
-.step p{font-size:25px;line-height:1.45;color:#dfe2ff}
+/* help */
+.help h2{position:absolute;left:150px;top:210px;font-size:90px;width:740px}
+.help .lead{position:absolute;left:152px;top:600px;width:720px}
+.steps{position:absolute;right:150px;top:200px;width:840px;display:flex;flex-direction:column;gap:20px}
+.step{display:flex;gap:28px;padding:30px 36px;align-items:flex-start}
+.step.on{background:linear-gradient(180deg,#1c1c1c,#121212);border-color:#4a4a4a}
+.step h3{font-family:'Poppins';font-weight:700;font-size:30px;letter-spacing:-.5px;margin-bottom:6px}
+.step p{font-size:23px;line-height:1.5;color:var(--muted)}
+.step .n{font-family:'Poppins';font-weight:800;color:#444;font-size:24px;margin-left:auto}
 
-/* DIVIDER */
-.divider h1{position:absolute;left:0;right:0;top:390px;text-align:center;font-size:150px;font-style:normal}
-.divider h1 span{display:block;font-style:italic}
+/* services */
+.services h2{position:absolute;left:0;right:0;top:150px;text-align:center;font-size:110px}
+.services .lead{position:absolute;left:0;right:0;top:330px;text-align:center;font-size:28px}
+.sgrid{position:absolute;left:150px;right:150px;top:450px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.sgrid .card{padding:30px 32px;min-height:270px}
+.sgrid h3{font-family:'Cabin';font-weight:700;font-size:29px;margin:22px 0 10px;letter-spacing:-.3px}
+.sgrid p{font-size:21px;line-height:1.5;color:var(--muted)}
 
-/* SERVICES split */
-.split .l,.split .r{position:absolute;top:0;bottom:72px;width:580px;display:flex;flex-direction:column;justify-content:center}
-.split .l{left:70px}
-.split .r{right:70px;text-align:right;align-items:flex-end}
-.split h2{font-size:80px;margin-bottom:30px}
-.split p{font-size:31px;line-height:1.42;max-width:580px}
-.list{margin-top:36px;display:flex;flex-direction:column;gap:6px;align-items:center;width:600px}
-.split .r .list{align-self:flex-end}
-.list span.t{font-family:'Poppins';font-weight:600;color:var(--cyan);font-size:31px;text-align:center}
+/* creator */
+.creator .tag{position:absolute;left:150px;top:200px;background:var(--red);color:#fff}
+.creator h2{position:absolute;left:150px;top:270px;font-size:118px;width:1050px}
+.creator .lead{position:absolute;left:152px;top:600px;width:900px;font-size:28px}
+.creator .feats{position:absolute;left:150px;top:790px;width:960px;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
+.feat{display:flex;align-items:center;gap:16px;border:1px solid var(--line);background:#0d0d0d;border-radius:20px;padding:16px 22px;font-size:23px;font-weight:600}
+.feat svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.8;flex:none}
+.phone{position:absolute;right:250px;top:170px;width:440px;height:800px;border-radius:40px;overflow:hidden;border:1px solid #333;
+  background:url(assets/video.jpg) center top/cover;box-shadow:0 0 120px rgba(255,255,255,.08)}
+.phone::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,transparent 22%,transparent 62%,rgba(0,0,0,.85) 100%)}
+.phone .rec{position:absolute;top:28px;left:28px;z-index:2;display:flex;gap:10px;align-items:center;font-weight:700;font-size:20px;letter-spacing:1px}
+.phone .rec i{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red)}
+.phone .cap{position:absolute;left:30px;right:30px;bottom:30px;z-index:2}
+.phone .cap b{font-size:24px}
+.phone .cap span{display:block;font-size:20px;color:#ddd;margin-top:6px}
+.phone .side{position:absolute;right:20px;bottom:150px;z-index:2;display:flex;flex-direction:column;gap:22px;align-items:center}
+.phone .side svg{width:38px;height:38px;fill:#fff}
+.creator .note{position:absolute;right:250px;top:990px;width:440px;text-align:center;font-size:18px;color:#666}
 
-/* CREATOR */
-.creator .ribbon{position:absolute;left:110px;top:150px;background:var(--green);color:#0b0532;font-family:'Montserrat';font-weight:900;font-style:italic;
-  font-size:30px;padding:12px 30px;border-radius:40px;letter-spacing:1px}
-.creator h2{position:absolute;left:110px;top:230px;font-size:86px;width:1050px}
-.creator .desc{position:absolute;left:112px;top:520px;width:900px;font-size:31px;line-height:1.45}
-.creator .feats{position:absolute;left:112px;top:760px;width:960px;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px}
-.feat{display:flex;gap:16px;align-items:center;font-size:28px;font-weight:600;color:var(--cyan)}
-.creator .photo{position:absolute;right:0;top:0;bottom:0;width:760px;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);background-size:cover;background-position:center}
-.creator .photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,6,52,.85))}
-.creator .edge{position:absolute;right:0;top:0;bottom:0;width:760px;clip-path:polygon(22% 0,calc(22% + 14px) 0,14px 100%,0 100%);background:#fff}
-.creator .quote{position:absolute;left:112px;bottom:60px;width:1100px;font-size:32px !important;text-align:left;font-family:'Montserrat';font-weight:800;font-style:italic;font-size:40px;line-height:1.15;z-index:2}
+/* stats */
+.stats .tag{position:absolute;left:150px;top:190px}
+.stats h2{position:absolute;left:150px;top:250px;font-size:98px;width:900px}
+.stats .lead{position:absolute;left:152px;top:740px;width:820px;font-size:27px}
+.stats .bul{position:absolute;left:152px;top:850px}
+.sts{position:absolute;right:150px;top:230px;width:720px;display:flex;flex-direction:column;gap:24px}
+.st{position:relative;height:190px;padding:30px 40px;overflow:hidden}
+.st .k{font-size:17px;letter-spacing:4px;color:#8a8a8a;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.st .k::before{content:"";width:8px;height:8px;border-radius:50%;background:#8a8a8a}
+.st .v{font-family:'Poppins';font-weight:800;font-size:80px;letter-spacing:-2px;margin-top:6px;text-shadow:0 0 30px rgba(255,255,255,.25)}
+.st .v small{font-size:.6em}
+.st svg.sp{position:absolute;left:0;right:0;bottom:0;width:100%;height:120px}
+.st .ar{position:absolute;right:34px;top:56px;width:54px;height:54px;border-radius:50%;border:1px solid #3a3a3a;display:flex;align-items:center;justify-content:center}
 
-.phone{position:absolute;right:250px;top:110px;width:430px;height:860px;border-radius:64px;background:#0a0a14;padding:16px;box-shadow:0 40px 80px rgba(0,0,0,.55),0 0 0 3px #2a2f5c}
-.phone .screen{position:relative;width:100%;height:100%;border-radius:50px;background-size:cover;background-position:center;overflow:hidden}
-.phone .screen::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 25%,transparent 60%,rgba(0,0,0,.75))}
-.phone .rec{position:absolute;top:34px;left:28px;z-index:2;font:700 22px Montserrat;display:flex;gap:10px;align-items:center}
-.phone .rec i{width:16px;height:16px;border-radius:50%;background:#ff3b5c;display:block}
-.phone .handle{position:absolute;top:32px;right:28px;z-index:2;font:600 22px Poppins}
-.phone .side{position:absolute;right:22px;bottom:200px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:40px}
-.phone .side small{font-size:18px;font-weight:600;margin-bottom:14px}
-.phone .cap{position:absolute;left:28px;bottom:50px;right:90px;z-index:2;font-size:22px;line-height:1.4}
-.creator .quote{z-index:3}
-/* BENEFITS */
-.benefits h2{position:absolute;left:110px;top:130px;font-size:96px}
-.bgrid{position:absolute;left:110px;right:110px;top:380px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.b{background:rgba(6,3,30,.6);border-radius:32px;padding:38px 40px;border:1px solid rgba(28,198,238,.22);min-height:270px}
-.b.hl{background:linear-gradient(135deg,#1747c4,#0b8fc7);border:none}
-.b .ico{width:64px;height:64px;border-radius:18px;background:rgba(28,198,238,.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.b.hl .ico{background:rgba(255,255,255,.2)}
-.b h3{font-size:34px;font-style:normal;margin-bottom:12px}
-.b p{font-size:24px;line-height:1.45;color:#dfe2ff}
-.b.hl p{color:#fff}
+/* plans */
+.plans h2{position:absolute;left:0;right:0;top:140px;text-align:center;font-size:100px}
+.plans .lead{position:absolute;left:0;right:0;top:300px;text-align:center;font-size:26px}
+.pgrid{position:absolute;left:150px;right:150px;top:385px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.plan{padding:34px 38px 30px;position:relative}
+.plan.hl{background:#fff;color:#000;border-color:#fff;box-shadow:0 0 80px rgba(255,255,255,.18)}
+.plan .nm{font-family:'Poppins';font-weight:800;font-size:40px;letter-spacing:-1px}
+.plan .ds{font-size:21px;color:var(--muted);margin:6px 0 20px}
+.plan.hl .ds{color:#555}
+.plan ul{list-style:none;border-top:1px solid #262626;padding-top:16px}
+.plan.hl ul{border-color:#ddd}
+.plan li{font-size:20px;line-height:1.35;padding:5px 0 5px 30px;position:relative;color:#d6d6d6}
+.plan.hl li{color:#222}
+.plan li::before{content:"";position:absolute;left:2px;top:11px;width:14px;height:8px;border-left:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(-45deg);color:#fff}
+.plan.hl li::before{color:#000}
+.plan .badge{position:absolute;top:34px;right:34px;background:#000;color:#fff;font-size:15px;font-weight:700;letter-spacing:1px;padding:7px 14px;border-radius:20px}
+.plans .extra{position:absolute;left:0;right:0;bottom:60px;text-align:center;font-size:24px;color:var(--soft)}
+.plans .extra b{color:#fff}
 
-/* PLANS */
-.plans h2{position:absolute;left:110px;top:90px;font-size:90px}
-.plans .sub{position:absolute;left:112px;top:205px;font-size:30px;color:#dfe2ff}
-.pgrid{position:absolute;left:110px;right:110px;top:270px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-.plan{background:#fff;color:#14123a;border-radius:36px;padding:0 0 22px;overflow:hidden;position:relative}
-.plan .hd{background:var(--pill);color:#fff;padding:24px 36px 20px;min-height:178px}
-.plan.mid .hd{background:linear-gradient(90deg,#1747c4,#11a7d6)}
-.plan .hd h3{font-size:42px;font-style:normal}
-.plan .hd p{font-size:21px;margin-top:6px;opacity:.95;font-style:italic}
-.plan ul{list-style:none;padding:18px 34px 0}
-.plan li{font-size:20px;line-height:1.32;padding:3px 0 3px 28px;position:relative;font-weight:500}
-.plan li::before{content:"";position:absolute;left:4px;top:13px;width:12px;height:12px;border-radius:50%;background:var(--cyan)}
-.plan li.star{color:#1747c4;font-weight:600}
-.plan li.star::before{background:var(--green)}
-.plan .tagtop{display:inline-block;margin-bottom:8px;background:var(--green);color:#0b0532;font-weight:700;font-size:17px;padding:6px 14px;border-radius:20px;font-family:'Montserrat'}
+/* testimonials */
+.testi h2{position:absolute;left:0;right:0;top:150px;text-align:center;font-size:104px}
+.tgrid{position:absolute;left:180px;right:180px;top:450px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tgrid .card{padding:40px 40px 34px;min-height:470px;display:flex;flex-direction:column}
+.stars5{font-size:30px;letter-spacing:4px}
+.tgrid p{font-size:23px;line-height:1.55;color:#bdbdbd;margin-top:20px;flex:1}
+.who{display:flex;align-items:center;gap:18px;margin-top:20px}
+.av{width:58px;height:58px;border-radius:50%;background:#1f1f1f;border:1px solid #444;display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;font-size:20px}
+.who b{display:block;font-size:23px}
+.who span{font-size:19px;color:#888}
 
-/* CONTACT */
-.contact h1{position:absolute;left:160px;right:160px;top:200px;text-align:center;font-size:76px;font-style:normal}
-.clist{position:absolute;left:520px;top:450px;display:flex;flex-direction:column;gap:38px}
-.crow{display:flex;align-items:center;gap:30px;font-size:40px}
-.crow .ic{width:84px;height:84px;border-radius:14px;background:var(--cyan);display:flex;align-items:center;justify-content:center;flex:none}
-.crow small{display:block;font-size:40px;line-height:1.25}
+/* contact */
+.contact .lion{position:absolute;right:0;top:0;bottom:0;width:820px;background:url(assets/lion.jpg) right 50%/auto 110% no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 50%);mask-image:linear-gradient(90deg,transparent,#000 50%);opacity:.75}
+.contact h2{position:absolute;left:150px;top:200px;font-size:124px;width:1150px}
+.contact .lead{position:absolute;left:152px;top:530px;width:820px}
+.clist{position:absolute;left:150px;top:670px;display:grid;grid-template-columns:auto auto;gap:20px 24px}
+.ci{display:flex;align-items:center;gap:20px;border:1px solid var(--line);background:#0d0d0d;border-radius:22px;padding:18px 26px;font-size:24px}
+.ci .ico{width:58px;height:58px;border-radius:14px}
+.ci .ico svg{width:28px;height:28px}
+.ci small{display:block;color:#888;font-size:17px;letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
+.ci.wa .ico{background:var(--green);border-color:var(--green)}
 </style>
 </head>
 <body>
 
-<!-- 1 COVER -->
+<!-- 1 PORTADA -->
 <section class="page cover">
-  <svg class="waves" data-waves="cover"></svg>
-  <h1>MARKETING QUE <span class="c">IMPULSA TU MARCA</span></h1>
-  <p class="tag">En <b>TGH Technology Solution</b> creamos estrategias, contenido y campañas que conectan tu marca con las personas correctas y la hacen crecer.</p>
-  <div class="badge"><span class="chip">REDES SOCIALES</span><span class="chip">CONTENIDO</span><span class="chip">PUBLICIDAD</span><span class="chip">BRANDING</span></div>
-  <img class="biglogo" src="assets/logo.png" alt="TGH Technology Solution">
+  <svg class="stars"></svg>
+  <div class="lion"></div>
+  <div class="top"><img src="assets/logo.png" alt="TGH Agencia de Marketing Digital"></div>
+  <div class="partners">
+    <span class="pill"><svg width="30" height="18" viewBox="0 0 30 18" fill="none" stroke="#fff" stroke-width="2.4"><path d="M3 15c-2-4 0-12 4-12s6 6 8 9 4 6 7 6 5-2 5-6-2-9-5-9-5 4-7 7-4 9-8 9-4-2-4-4z"/></svg>Meta Business Partner</span>
+    <span class="pill"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M20.5 12.2c0 4.8-3.5 8.3-8.4 8.3a8.5 8.5 0 110-17c2.3 0 4.2.8 5.7 2.2"/><path d="M12.4 12h8.1"/></svg>Google Partner</span>
+  </div>
+  <h1>Transformamos tu presencia online en <span class="s">oportunidades</span> reales.</h1>
+  <p class="lead">Estrategia, contenido y publicidad para atraer clientes, aumentar ventas y convertir tu inversión en <b>resultados medibles.</b></p>
+  <div class="yr">AGENCIATGH.PE</div>
 </section>
 
-<!-- 2 ABOUT -->
+<!-- 2 QUIENES SOMOS -->
 <section class="page about">
-  <svg class="waves" data-waves="soft"></svg>
-  <img class="logo" src="assets/logo.png" alt="">
-  <div class="pill">¿Quiénes somos?</div>
-  <div class="txt" style="top:330px">
-    <h2>TU AGENCIA <span class="c">DE MARKETING DIGITAL</span></h2>
-    <p class="lead">Somos un equipo de estrategas, creativos, diseñadores y realizadores audiovisuales que convierte marcas en referentes dentro de sus redes.</p>
-    <p class="lead" style="margin-top:22px">Planificamos, creamos y medimos: cada publicación y cada campaña tiene un objetivo claro, <span class="c" style="font-weight:600">hacer crecer tu negocio.</span></p>
+  <svg class="stars"></svg>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="pg"><b>01</b> · Quiénes somos</span></div>
+  <h2>Somos <span class="s">TGH.</span></h2>
+  <p class="lead">Una <b>agencia de marketing digital</b> que no ejecuta acciones aisladas: construimos sistemas que conectan <b>estrategia, contenido, publicidad y automatización</b> para escalar tu negocio de forma predecible.<br><br>Somos <b>Meta Business Partner</b> y <b>Google Partner</b>.</p>
+  <div class="cards">
+    <div class="card"><div class="row"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div></div>
+      <h3>Misión</h3><p>Ser el socio estratégico de las marcas que quieren crecer, con soluciones creativas y personalizadas que generan resultados reales.</p></div>
+    <div class="card"><div class="row"><div class="ico"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div></div>
+      <h3>Visión</h3><p>Ser la agencia de referencia en marketing digital y creación de contenido por el crecimiento que logran nuestros clientes.</p></div>
   </div>
-  <div class="cards" style="top:300px">
-    <div class="card"><h3>MISIÓN</h3><p>Ser el socio estratégico de nuestros clientes, aportando soluciones creativas, innovadoras y personalizadas que fortalezcan su marca y generen resultados reales.</p></div>
-    <div class="card"><h3>VISIÓN</h3><p>Ser reconocidos como una agencia líder en marketing digital y creación de contenido, por la calidad de nuestro trabajo y el crecimiento de las marcas que acompañamos.</p></div>
-  </div>
-  
+  <div class="foot"><span>Agencia de marketing digital</span><span>agenciatgh.pe</span></div>
 </section>
 
-<!-- 3 HOW WE HELP -->
+<!-- 3 COMO AYUDAMOS -->
 <section class="page help">
-  <svg class="waves" data-waves="soft"></svg>
-  <img class="logo" src="assets/logo.png" alt="">
-  <h2>¿CÓMO PODEMOS<br><span class="c">AYUDARTE?</span></h2>
-  <p class="sub">Si tu marca publica sin estrategia, no logra interacción o sus anuncios no venden, te acompañamos en todo el proceso:</p>
+  <svg class="stars"></svg>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="pg"><b>02</b> · Cómo te ayudamos</span></div>
+  <h2>Conoce nuestro método de <span class="s">crecimiento</span></h2>
+  <p class="lead">Si publicas sin estrategia, tus anuncios no venden o tu marca no conecta, te acompañamos en <b>todo el proceso.</b></p>
   <div class="steps">
-    <div class="step"><div class="n">01</div><h3>DIAGNÓSTICO</h3><p>Analizamos tu marca, tu público y tu competencia (benchmarking) para saber dónde estás y a dónde puedes llegar.</p></div>
-    <div class="step"><div class="n">02</div><h3>ESTRATEGIA</h3><p>Definimos objetivos, calendario de contenido mensual y el presupuesto ideal a invertir en redes.</p></div>
-    <div class="step"><div class="n">03</div><h3>CREACIÓN</h3><p>Producimos posts, videos, fotografía y copywriting optimizado, con una creadora de contenido que le da rostro a tu marca.</p></div>
-    <div class="step"><div class="n">04</div><h3>RESULTADOS</h3><p>Lanzamos campañas, gestionamos tu comunidad y te entregamos reportes con sugerencias de mejora.</p></div>
+    <div class="card step"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div><div><h3>Diagnóstico</h3><p>Analizamos tu marca, tu público y tu competencia para encontrar oportunidades.</p></div><span class="n">01</span></div>
+    <div class="card step"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 20V10M12 20V4M18 20v-6"/></svg></div><div><h3>Estrategia &amp; Planificación</h3><p>Objetivos claros, calendario de contenido y presupuesto ideal para tu pauta.</p></div><span class="n">02</span></div>
+    <div class="card step"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><div><h3>Contenido de Alto Impacto</h3><p>Posts, videos y una creadora de contenido que le da rostro a tu marca.</p></div><span class="n">03</span></div>
+    <div class="card step on"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><div><h3>Optimización y Escalamiento</h3><p>Analizamos métricas, identificamos oportunidades y optimizamos para maximizar resultados.</p></div><span class="n">04</span></div>
   </div>
 </section>
 
-<!-- 4 DIVIDER -->
-<section class="page divider">
-  <svg class="circuit" style="left:-30px;top:-30px;transform:scaleX(-1) scaleY(-1)" data-circuit="2"></svg>
-  <svg class="circuit" style="right:-30px;bottom:-30px" data-circuit="3"></svg>
-  <h1>TE OFRECEMOS <span class="c">SOLUCIONES CREATIVAS</span></h1>
+<!-- 4 SERVICIOS -->
+<section class="page services">
+  <svg class="stars"></svg>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="pg"><b>03</b> · Servicios</span></div>
+  <h2>Nuestros <span class="s">servicios.</span></h2>
+  <p class="lead">Impulsamos tu negocio con estrategias digitales, contenido creativo y campañas orientadas a resultados.</p>
+  <div class="sgrid">
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Gestión de Redes Sociales</h3><p>Planificamos, creamos y gestionamos contenido para construir una comunidad activa.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 12a22 22 0 0110-9c0 4-2 7-9 10z"/><path d="M9 12l3 3"/><path d="M9 12H5l2-4h4M12 15v4l4-2v-4"/></svg></div><h3>Campañas Publicitarias</h3><p>Meta, Google y TikTok Ads para generar más leads, ventas y oportunidades.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg></div><h3>Post &amp; Videos</h3><p>Diseños y videos publicitarios de alto impacto que captan atención.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div><h3>Email Marketing</h3><p>Campañas automatizadas y personalizadas que fidelizan y convierten.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v12H3z"/><circle cx="12" cy="13" r="4"/></svg></div><h3>Fotografía &amp; Producción</h3><p>Sesiones de producto y grabaciones en tu local con calidad profesional.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 000 18M3 12h18"/></svg></div><h3>Identidad de Marca</h3><p>Manual de marca con logotipo, colores y tipografías para comunicar con consistencia.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h7v16H4zM13 4h7v16h-7z"/></svg></div><h3>Brochure &amp; Catálogo</h3><p>Piezas impresas o digitales para presentar tus productos y cerrar ventas.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7l4-3h8l4 3-3 3v10H7V10z"/></svg></div><h3>Merchandising</h3><p>Artículos con tu logo que aumentan la visibilidad y fidelizan clientes.</p></div>
+  </div>
 </section>
 
-<!-- 5 SERVICES A -->
-<section class="page split">
-  <svg class="waves" data-waves="soft"></svg>
-  <div class="slant" style="left:790px;width:340px;transform:skewX(-14deg);background-image:url(assets/social.jpg)"></div>
-  <img class="logo left" src="assets/logo.png" alt="" style="top:56px">
-  <div class="l" style="justify-content:flex-end;padding-bottom:110px">
-    <h2>PUBLICIDAD <span class="c">DIGITAL:</span></h2>
-    <p>Gestión de campañas en Meta Ads (Facebook e Instagram), TikTok y Google Ads para aumentar tu visibilidad, generar tráfico y convertir leads en clientes.</p>
-  </div>
-  <div class="r" style="justify-content:flex-start;padding-top:200px">
-    <h2>COMMUNITY <span class="c">MANAGER:</span></h2>
-    <p>Gestionamos tus redes, creamos contenido, interactuamos con tu audiencia y hacemos crecer tus seguidores y su participación.</p>
-  </div>
-  <div class="footer">Visita nuestro portafolio aquí: <b>https://www.behance.net/tghtechnology</b></div>
-</section>
-
-<!-- 6 SERVICES B -->
-<section class="page split">
-  <svg class="waves" data-waves="soft"></svg>
-  <div class="slant" style="left:790px;width:340px;transform:skewX(-14deg);background-image:url(assets/camera.jpg)"></div>
-  <img class="logo left" src="assets/logo.png" alt="">
-  <div class="l" style="justify-content:flex-end;padding-bottom:110px">
-    <h2 style="font-size:72px">FOTOGRAFÍA <span class="c">Y VIDEO:</span></h2>
-    <p>Producción de contenido visual para redes, web y catálogos: sesiones de producto, reels y visitas a tu local para capturar la esencia de tu marca.</p>
-  </div>
-  <div class="r" style="justify-content:flex-start;padding-top:200px">
-    <h2 class="c" style="font-size:66px">MERCHANDISING:</h2>
-    <p>Diseño y producción de artículos con tu logo para aumentar la visibilidad de tu marca y fidelizar a tus clientes.</p>
-  </div>
-  <div class="footer">Visita nuestro portafolio aquí: <b>https://www.behance.net/tghtechnology</b></div>
-</section>
-
-<!-- 7 SERVICES C -->
-<section class="page split">
-  <svg class="waves" data-waves="soft"></svg>
-  <div class="slant" style="left:790px;width:340px;transform:skewX(-14deg);background-image:url(assets/catalog.jpg)"></div>
-  <img class="logo" src="assets/logo.png" alt="">
-  <div class="l" style="justify-content:flex-start;padding-top:190px">
-    <h2>IDENTIDAD <span class="c">DE MARCA:</span></h2>
-    <p>Creamos tu manual de marca con pautas de uso de logotipo, colores y tipografías para que tu comunicación sea siempre consistente.</p>
-  </div>
-  <div class="r" style="justify-content:flex-end;padding-bottom:110px">
-    <h2>BROCHURE / <span class="c">CATÁLOGO:</span></h2>
-    <p>Materiales impresos o digitales para presentar tus productos y atraer clientes en ferias, reuniones y redes.</p>
-  </div>
-  <div class="footer">Visita nuestro portafolio aquí: <b>https://www.behance.net/tghtechnology</b></div>
-</section>
-
-<!-- 8 CREATOR -->
+<!-- 5 CREADORA -->
 <section class="page creator">
-  <svg class="waves" data-waves="soft"></svg>
-  <div class="slant" style="left:1300px;width:900px;transform:skewX(-14deg);background:linear-gradient(160deg,#1747c4,#0b8fc7 60%,#1cc6ee)"></div>
-  <div class="phone"><div class="screen" style="background-image:url(assets/camera.jpg)">
-    <div class="rec"><i></i>REC</div><div class="handle">@tumarca</div>
-    <div class="side"><span>♥</span><small>12,4K</small><span>💬</span><small>865</small><span>➤</span></div>
-    <div class="cap"><b>Creadora TGH</b><br>Probando lo nuevo de #TuMarca ✨</div>
-  </div></div>
-  <img class="logo left" src="assets/logo.png" alt="" style="width:300px;top:40px">
-  <div class="ribbon">★ BENEFICIO EXCLUSIVO TGH</div>
-  <h2>UNA CREADORA DE CONTENIDO <span class="c">PARA TU MARCA</span></h2>
-  <p class="desc">Te brindamos una creadora de contenido que <b class="c">castea tu marca</b>: le pone rostro, voz y personalidad a tus productos y servicios para que tu audiencia confíe en ti y quiera comprarte.</p>
+  <svg class="stars"></svg>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="pg"><b>04</b> · Beneficio exclusivo</span></div>
+  <span class="tag">Beneficio exclusivo TGH</span>
+  <h2>Tu marca con <span class="s">rostro</span> propio.</h2>
+  <p class="lead">Te brindamos una <b>creadora de contenido</b> que castea tu marca: le pone rostro, voz y personalidad a tus productos para que tu audiencia confíe en ti y quiera comprarte.</p>
   <div class="feats">
-    <div class="feat"><span class="plus">+</span>Reels y TikToks con presencia real</div>
-    <div class="feat"><span class="plus">+</span>Reseñas y demostraciones de producto</div>
-    <div class="feat"><span class="plus">+</span>Contenido grabado en tu local</div>
-    <div class="feat"><span class="plus">+</span>Unboxing, tendencias y testimonios</div>
+    <div class="feat"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>Reels y TikToks con presencia real</div>
+    <div class="feat"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.5 5.7 21l1.5-7L2 9.3l7-.8z"/></svg>Reseñas y demostraciones</div>
+    <div class="feat"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12H3z"/><path d="M9 21v-6h6v6"/></svg>Contenido grabado en tu local</div>
+    <div class="feat"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Tendencias, unboxing y testimonios</div>
   </div>
-  <div class="quote">LAS PERSONAS CONECTAN CON <span class="c">PERSONAS</span>, NO CON LOGOS.</div>
-</section>
-
-<!-- 9 BENEFITS -->
-<section class="page benefits">
-  <svg class="waves" data-waves="soft"></svg>
-  <img class="logo" src="assets/logo.png" alt="">
-  <h2>¿POR QUÉ <span class="c">ELEGIRNOS?</span></h2>
-  <div class="bgrid">
-    <div class="b hl"><div class="ico" data-icon="star"></div><h3>Creadora de contenido</h3><p>Tu marca con rostro propio: una creadora que protagoniza tu contenido y genera confianza.</p></div>
-    <div class="b"><div class="ico" data-icon="cal"></div><h3>Estrategia a medida</h3><p>Calendario de contenido mensual y planificación del presupuesto a invertir en redes.</p></div>
-    <div class="b"><div class="ico" data-icon="cam"></div><h3>Producción en tu local</h3><p>Visitamos tu negocio para capturar fotos y videos reales de tus productos y tu equipo.</p></div>
-    <div class="b"><div class="ico" data-icon="pen"></div><h3>Copywriting optimizado</h3><p>Textos que conectan, posicionan y venden, adaptados a cada red social.</p></div>
-    <div class="b"><div class="ico" data-icon="chat"></div><h3>Comunidad atendida</h3><p>Respondemos mensajes y comentarios con monitoreo de lunes a viernes de 8 a.m. a 6 p.m.</p></div>
-    <div class="b"><div class="ico" data-icon="chart"></div><h3>Resultados medibles</h3><p>Reportes mensuales detallados con sugerencias de mejora para crecer mes a mes.</p></div>
+  <div class="phone">
+    <div class="rec"><i></i>REC</div>
+    <div class="side">
+      <svg viewBox="0 0 24 24"><path d="M12 21l-1.4-1.3C5.4 15 2 12 2 8.4 2 5.4 4.4 3 7.4 3c1.7 0 3.4.8 4.6 2.1C13.2 3.8 14.9 3 16.6 3 19.6 3 22 5.4 22 8.4c0 3.6-3.4 6.6-8.6 11.3z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+    </div>
+    <div class="cap"><b>@tumarca</b><span>Contenido con rostro real que conecta ✨</span></div>
   </div>
 </section>
 
-<!-- 10 PLANS -->
+<!-- 6 DIFERENCIAL -->
+<section class="page stats">
+  <svg class="stars"></svg>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="pg"><b>05</b> · Diferencial</span></div>
+  <span class="tag">Diferencial</span>
+  <h2>No generamos métricas, generamos <span class="s">crecimiento.</span></h2>
+  <p class="lead">Transformamos inversión publicitaria en oportunidades reales con estrategias de adquisición, posicionamiento y conversión.</p>
+  <ul class="bul"><li>Performance orientado a negocio</li><li>Creatividad basada en datos</li><li>Optimización constante</li></ul>
+  <div class="sts">
+    <div class="card st"><div class="k">Crecimiento en ventas</div><div class="v"><small>+</small>150<small>%</small></div><div class="ar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></div><svg class="sp" viewBox="0 0 720 120" preserveAspectRatio="none"><path d="M0 100 L200 95 L300 70 L720 60" fill="none" stroke="#555" stroke-width="2"/></svg></div>
+    <div class="card st"><div class="k">Satisfacción de clientes</div><div class="v">98<small>%</small></div><div class="ar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></div><svg class="sp" viewBox="0 0 720 120" preserveAspectRatio="none"><path d="M0 90 L160 88 L270 100 L430 60 L560 66 L720 55" fill="none" stroke="#555" stroke-width="2"/></svg></div>
+    <div class="card st"><div class="k">Leads generados</div><div class="v"><small>+</small>10,000</div><div class="ar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></div><svg class="sp" viewBox="0 0 720 120" preserveAspectRatio="none"><path d="M0 115 L300 95 L480 70 L720 40" fill="none" stroke="#555" stroke-width="2"/></svg></div>
+  </div>
+</section>
+
+<!-- 7 PLANES -->
 <section class="page plans">
-  <svg class="waves" data-waves="soft"></svg>
-  <img class="logo" src="assets/logo.png" alt="">
-  <h2>NUESTROS <span class="c">PLANES</span></h2>
-  <p class="sub">Manejo de redes en Facebook, Instagram y TikTok, según la etapa de tu marca.</p>
+  <svg class="stars"></svg>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="pg"><b>06</b> · Planes</span></div>
+  <h2>Elige tu <span class="s">plan.</span></h2>
+  <p class="lead">Gestión de Facebook, Instagram y TikTok según la etapa de tu marca.</p>
   <div class="pgrid">
-    <div class="plan"><div class="hd"><h3>PLAN BÁSICO</h3><p>Para comenzar a posicionar tu marca en redes.</p></div>
-      <ul>
-        <li>12 publicaciones mensuales (7 posts + 4 videos)</li>
-        <li>Planificación de presupuesto a invertir en redes</li>
-        <li>Rediseño de portada (opcional)</li>
-        <li>Calendario de contenido mensual</li>
-        <li>Copywriting optimizado</li>
-        <li>Respuesta de mensajes y comentarios</li>
-        <li>Monitoreo L-V de 8 a.m. a 6 p.m.</li>
-        <li>1 campaña al mes (activación mensual)</li>
-        <li>1 visita al local al mes (fotos/videos)</li>
-        <li>1 reunión virtual al mes</li>
-      </ul></div>
-    <div class="plan mid"><div class="hd"><span class="tagtop">MÁS ELEGIDO</span><h3>PLAN INTERMEDIO</h3><p>Más contenido, análisis y campañas quincenales.</p></div>
-      <ul>
-        <li>Análisis de la marca + benchmarking</li>
-        <li>17 publicaciones mensuales (10 posts + 7 videos)</li>
-        <li>Planificación de presupuesto a invertir en redes</li>
-        <li>Rediseño de portada (opcional)</li>
-        <li>Calendario de contenido mensual</li>
-        <li>Respuesta de mensajes y comentarios</li>
-        <li>Monitoreo L-V de 8 a.m. a 6 p.m.</li>
-        <li>Reporte mensual + sugerencias de mejora</li>
-        <li>2 campañas al mes (activación quincenal)</li>
-        <li>2 visitas al local al mes (fotos/videos)</li>
-      </ul></div>
-    <div class="plan"><div class="hd"><h3>PLAN PREMIUM</h3><p>Gestión completa y estrategias avanzadas.</p></div>
-      <ul>
-        <li>Análisis de la competencia</li>
-        <li>25 publicaciones mensuales (13 posts + 12 videos)</li>
-        <li>Planificación de presupuesto a invertir en redes</li>
-        <li>Rediseño de portada (opcional)</li>
-        <li>Calendario de contenido mensual</li>
-        <li>Respuesta de mensajes y comentarios</li>
-        <li>Monitoreo L-V de 8 a.m. a 6 p.m.</li>
-        <li>Reporte mensual + sugerencias de mejora</li>
-        <li>3 campañas al mes (activación diaria)</li>
-        <li>3 visitas al local al mes (fotos/videos)</li>
-      </ul></div>
+    <div class="card plan"><div class="nm">Básico</div><div class="ds">Para comenzar a posicionar tu marca.</div>
+      <ul><li>12 publicaciones al mes (7 posts + 4 videos)</li><li>Calendario de contenido mensual</li><li>Copywriting optimizado</li><li>Planificación de presupuesto en redes</li><li>Respuesta de mensajes y comentarios</li><li>Monitoreo L-V, 8 a.m. a 6 p.m.</li><li>1 campaña al mes</li><li>1 visita al local al mes (fotos/videos)</li><li>1 reunión virtual al mes</li><li>Rediseño de portada (opcional)</li></ul></div>
+    <div class="card plan hl"><span class="badge">MÁS ELEGIDO</span><div class="nm">Intermedio</div><div class="ds">Más contenido, análisis y campañas quincenales.</div>
+      <ul><li>Análisis de marca + benchmarking</li><li>17 publicaciones al mes (10 posts + 7 videos)</li><li>Calendario de contenido mensual</li><li>Planificación de presupuesto en redes</li><li>Respuesta de mensajes y comentarios</li><li>Monitoreo L-V, 8 a.m. a 6 p.m.</li><li>Reporte mensual + sugerencias de mejora</li><li>2 campañas al mes (activación quincenal)</li><li>2 visitas al local al mes (fotos/videos)</li><li>Rediseño de portada (opcional)</li></ul></div>
+    <div class="card plan"><div class="nm">Premium</div><div class="ds">Gestión completa y estrategias avanzadas.</div>
+      <ul><li>Análisis de la competencia</li><li>25 publicaciones al mes (13 posts + 12 videos)</li><li>Calendario de contenido mensual</li><li>Planificación de presupuesto en redes</li><li>Respuesta de mensajes y comentarios</li><li>Monitoreo L-V, 8 a.m. a 6 p.m.</li><li>Reporte mensual + sugerencias de mejora</li><li>3 campañas al mes (activación diaria)</li><li>3 visitas al local al mes (fotos/videos)</li><li>Rediseño de portada (opcional)</li></ul></div>
   </div>
-  <div style="position:absolute;left:110px;right:110px;bottom:40px;text-align:center;font-size:27px;font-weight:600">
-    <span class="plus" style="vertical-align:middle;margin-right:12px">+</span>Potencia cualquier plan con nuestra <span class="c">creadora de contenido</span> para castear tu marca.
+  <p class="extra">Potencia cualquier plan con nuestra <b>creadora de contenido</b> para castear tu marca.</p>
+</section>
+
+<!-- 8 TESTIMONIOS -->
+<section class="page testi">
+  <svg class="stars"></svg>
+  <div class="top"><img src="assets/logo.png" alt=""><span class="pg"><b>07</b> · Testimonios</span></div>
+  <h2>Lo que dicen los <span class="s">números</span><br><span class="g">(y nuestros clientes).</span></h2>
+  <div class="tgrid">
+    <div class="card"><div class="stars5">★★★★★</div><p>"El servicio de la agencia destaca por su capacidad de respuesta y adaptabilidad. Lograron plasmar exactamente lo que buscábamos: una publicidad con mensajes claros, cortos y directos que conectan mejor con nuestro público."</p><div class="who"><div class="av">FP</div><div><b>Fernando Portilla</b><span>Gerente General en BELTEX</span></div></div></div>
+    <div class="card"><div class="stars5">★★★★★</div><p>"Alto nivel de responsabilidad y excelente organización en cada requerimiento. Gracias a su impecable gestión, logramos incrementar nuestras ventas en un 40%."</p><div class="who"><div class="av">VN</div><div><b>Dra. Vanessa Niño</b><span>Gerente en Consultorio Dra. Vanessa</span></div></div></div>
+    <div class="card"><div class="stars5">★★★★★</div><p>"Gran desempeño y responsabilidad; el contenido creativo, tanto en flyers como en videos, cumple con los más altos estándares. Hemos logrado un notable crecimiento del 20% en nuestras ventas."</p><div class="who"><div class="av">AM</div><div><b>Dr. Alfredo Martínez</b><span>Gerente en VIVALMA</span></div></div></div>
   </div>
 </section>
 
-<!-- 11 CONTACT -->
+<!-- 9 CONTACTO -->
 <section class="page contact">
-  <svg class="waves" data-waves="contact"></svg>
-  <h1>¡CONTÁCTANOS Y HAZ CRECER <span class="c">TU MARCA HOY!</span></h1>
+  <svg class="stars"></svg>
+  <div class="lion"></div>
+  <div class="top"><img src="assets/logo.png" alt=""></div>
+  <h2>Hagamos <span class="s">crecer</span> tu marca hoy.</h2>
+  <p class="lead">Agenda una reunión y te mostramos cómo convertir tu inversión en <b>clientes reales.</b></p>
   <div class="clist">
-    <div class="crow"><div class="ic" data-icon="mail"></div><div><small>alex.lara@tghtechnologysolution.com</small><small>administracion@tghtechnologysolution.com</small></div></div>
-    <div class="crow"><div class="ic" data-icon="fb"></div><div>TGH Technology Solution</div></div>
-    <div class="crow"><div class="ic" data-icon="web"></div><div><small>https://agenciatgh.pe/</small><small style="font-size:30px;color:#c9cdf2">Portafolio: behance.net/tghtechnology</small></div></div>
-    <div class="crow"><div class="ic" data-icon="wa"></div><div>993 584 224 &nbsp;/&nbsp; 976 224 095</div></div>
+    <div class="ci wa"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4-1z"/></svg></div><div><small>WhatsApp</small>993 584 224 · 976 224 095</div></div>
+    <div class="ci"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></div><div><small>Web</small>agenciatgh.pe</div></div>
+    <div class="ci"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div><div><small>Correo</small>alex.lara@tghtechnologysolution.com</div></div>
+    <div class="ci"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div><div><small>Correo</small>administracion@tghtechnologysolution.com</div></div>
   </div>
-  <img src="assets/logo.png" alt="" style="position:absolute;right:70px;bottom:50px;width:300px;opacity:.9">
 </section>
 
 <script>
-// sinuous line-bundle waves like the original brochure
-const NS='http://www.w3.org/2000/svg';
-function bundle(svg,{y0,amp,len,phase,color,n,spread,op}){
-  for(let i=0;i<n;i++){
-    const p=document.createElementNS(NS,'path');let d='';
-    const a=amp*(1+i/n*.6), off=y0+i*spread, ph=phase+i*.035;
-    for(let x=-50;x<=1970;x+=20){const y=off+a*Math.sin(x/len+ph)+a*.4*Math.sin(x/(len*.47)+ph*1.7);d+=(x<0?'M':'L')+x+' '+y.toFixed(1)}
-    p.setAttribute('d',d);p.setAttribute('fill','none');p.setAttribute('stroke',color);p.setAttribute('stroke-width','1.1');p.setAttribute('opacity',op);svg.appendChild(p);
-  }
-}
-document.querySelectorAll('svg.waves').forEach(svg=>{
-  svg.setAttribute('viewBox','0 0 1920 1080');svg.setAttribute('preserveAspectRatio','none');
-  const t=svg.dataset.waves;
-  if(t==='cover'){bundle(svg,{y0:40,amp:150,len:260,phase:0,color:'#6a4fd8',n:60,spread:3,op:.28});bundle(svg,{y0:880,amp:120,len:300,phase:2,color:'#3d6fe0',n:50,spread:3,op:.22})}
-  else if(t==='contact'){bundle(svg,{y0:60,amp:140,len:180,phase:1,color:'#1cc6ee',n:26,spread:5,op:.55});bundle(svg,{y0:960,amp:120,len:200,phase:3,color:'#1cc6ee',n:26,spread:5,op:.5})}
-  else{bundle(svg,{y0:120,amp:110,len:300,phase:.5,color:'#6a4fd8',n:40,spread:3,op:.18});bundle(svg,{y0:840,amp:90,len:340,phase:2.4,color:'#3d6fe0',n:35,spread:3,op:.15})}
-});
-// circuit traces
-document.querySelectorAll('svg.circuit').forEach(svg=>{
-  svg.setAttribute('viewBox','0 0 420 420');let s='';
-  for(let i=0;i<12;i++){const x=420-i*26, y=420-i*8;s+=`<path d="M${x} 420 L${x} ${300-i*14} L${x-90} ${190-i*12}" stroke="#1cc6ee" stroke-width="2" fill="none" opacity=".6"/><circle cx="${x-90}" cy="${190-i*12}" r="7" fill="#1cc6ee" opacity=".8"/>`}
-  svg.innerHTML=s;
-});
-// icons
-const I={
- star:'<path d="M12 2l3 6.6 7 .7-5.3 4.7 1.6 7L12 17.3 5.7 21l1.6-7L2 9.3l7-.7z"/>',
- cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
- cam:'<rect x="2" y="7" width="20" height="14" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M8 7l2-3h4l2 3"/>',
- pen:'<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>',
- chat:'<path d="M4 4h16v12H8l-4 4z"/>',
- chart:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
- mail:'<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 6l10 7 10-7"/>',
- fb:'<path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8z" fill="#fff" stroke="none"/>',
- web:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>',
- wa:'<path d="M4 20l1.3-4A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4-1z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1c-1.2-.5-2.4-1.7-2.9-2.9l1-1-1-2z" fill="#fff" stroke="none"/>'
-};
-document.querySelectorAll('[data-icon]').forEach(el=>{
-  const big=el.classList.contains('ic');const c=big?'#fff':'#1cc6ee';const parentHl=el.closest('.hl');
-  el.innerHTML=`<svg viewBox="0 0 24 24" width="${big?50:36}" height="${big?50:36}" fill="none" stroke="${parentHl?'#fff':c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[el.dataset.icon]}</svg>`;
+// soft star particles like the website
+let seed=7;const r=()=>(seed=(seed*16807)%2147483647)/2147483647;
+document.querySelectorAll('svg.stars').forEach(svg=>{
+  svg.setAttribute('viewBox','0 0 1920 1080');let h='<defs><radialGradient id="gl"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>';
+  for(let i=0;i<70;i++){const x=r()*1920,y=r()*1080,s=r();h+=s>.85?`<circle cx="${x}" cy="${y}" r="${6+s*6}" fill="url(#gl)" opacity=".35"/>`:`<circle cx="${x}" cy="${y}" r="${.8+s*1.6}" fill="#fff" opacity="${.15+s*.35}"/>`}
+  svg.innerHTML=h;
 });
 </script>
 </body>
