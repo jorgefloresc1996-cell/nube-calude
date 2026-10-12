@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Propuesta Página Web · PREGÓN</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--navy:#2b3180;--navy2:#22276b;--blue:#4471c4;--ink:#22264f;--txt:#3b3f5c;--muted:#6b6f8a;--line:#d9def0;--soft:#eef2fb;--green:#27a84a;--cyan:#3a79c9}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',sans-serif;color:var(--txt);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:794px;height:1123px;position:relative;overflow:hidden;background:#fff;page-break-after:always}
+.net{position:absolute;right:0;top:0;width:520px;opacity:.9}
+.robot{position:absolute;left:50%;top:560px;width:430px;transform:translateX(-50%);opacity:.05}
+.logo{position:absolute;left:44px;top:36px;width:250px}
+.logo.sm{width:170px;top:30px}
+h1{position:absolute;left:0;right:0;top:140px;text-align:center;font-weight:900;font-size:24px;color:var(--navy2)}
+.pill{position:absolute;left:50%;transform:translateX(-50%);top:176px;background:var(--navy);color:#fff;font-weight:700;font-size:12.5px;letter-spacing:2.4px;padding:7px 20px;border-radius:20px;white-space:nowrap}
+.wrap{position:absolute;left:76px;right:76px;top:220px}
+.wrap.p2{top:110px}
+.meta{display:grid;grid-template-columns:1.3fr .8fr .9fr;border:1px solid var(--line);border-radius:8px;background:#fff}
+.meta div{padding:10px 14px}
+.meta div+div{border-left:1px solid var(--line)}
+.meta small{display:block;font-weight:900;font-size:9.5px;letter-spacing:1.4px;color:var(--cyan);margin-bottom:3px}
+.meta b{font-size:13px;color:var(--ink)}
+.sec{display:flex;align-items:center;gap:10px;font-weight:900;font-size:14px;color:var(--ink);margin:16px 0 9px}
+.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec i{font-style:normal;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center}
+.intro{font-size:12.3px;line-height:1.6}
+.intro b{color:var(--ink)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.f{display:flex;gap:10px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.94);border-radius:8px;padding:9px 11px}
+.f .ic{width:34px;height:34px;flex:none;border-radius:8px;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.f svg{width:19px;height:19px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.f b{display:block;font-size:12px;color:var(--ink)}
+.f span{font-size:10.4px;color:var(--muted);line-height:1.3;display:block}
+.tl{display:grid;grid-template-columns:1fr 2fr;gap:0;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.tl div{padding:10px 14px;position:relative}
+.tl .d1{background:var(--soft)}
+.tl .d2{background:#dfe7f8}
+.tl b{display:block;color:var(--navy2);font-size:12.5px}
+.tl span{font-size:10.8px;color:var(--txt)}
+.tl em{position:absolute;right:12px;top:10px;font-style:normal;font-weight:900;color:var(--navy);font-size:12px}
+.tlnote{display:flex;justify-content:space-between;margin-top:6px;font-size:10.8px;color:var(--muted)}
+.tlnote b{color:var(--ink)}
+.price{display:grid;grid-template-columns:1fr 1.05fr;gap:14px;margin-top:16px}
+.inv{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:#fff}
+.inv h4{font-size:12.5px;font-weight:900;color:var(--ink);margin-bottom:4px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed var(--line)}
+.row b{font-size:12px;color:var(--ink);display:block}
+.row small{font-size:10.2px;color:var(--muted)}
+.row .v{font-weight:900;font-size:14px;color:var(--navy2);white-space:nowrap}
+.row .v.g{color:var(--green)}
+.note{margin-top:8px;background:var(--soft);border-radius:6px;padding:7px 10px;font-size:10.5px;line-height:1.45}
+.note b{color:var(--ink)}
+.dark{background:linear-gradient(135deg,#2b3180,#22276b);border-radius:10px;color:#fff;padding:15px 18px;position:relative}
+.dark .k{font-size:10.4px;font-weight:900;letter-spacing:2px;opacity:.9}
+.dark .tag{position:absolute;right:14px;top:12px;background:#2fbf5b;color:#fff;font-size:10px;font-weight:900;padding:4px 10px;border-radius:12px}
+.dark .big{display:flex;align-items:flex-end;gap:4px;margin:6px 0 2px}
+.dark .big sup{font-size:15px;font-weight:700;align-self:flex-start;margin-top:8px}
+.dark .big strong{font-size:46px;font-weight:900;line-height:1}
+.dark .big span{font-size:13px;font-weight:700;margin-bottom:6px}
+.dark p{font-size:10.8px;opacity:.9}
+.dark ul{list-style:none;margin-top:8px;background:rgba(255,255,255,.12);border-radius:6px;padding:7px 10px}
+.dark li{font-size:10.8px;padding:2px 0 2px 16px;position:relative}
+.dark li::before{content:"✓";position:absolute;left:0;color:#7ee29a;font-weight:900}
+.fine{text-align:right;font-size:9.6px;color:var(--muted);margin-top:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{border:1px solid var(--line);border-radius:7px;overflow:hidden;background:rgba(255,255,255,.94)}
+.box h3{background:var(--blue);color:#fff;font-size:11px;font-weight:900;letter-spacing:.3px;padding:7px 12px;text-transform:uppercase}
+.box ul{list-style:none;padding:7px 12px 9px}
+.box li{font-size:11.2px;line-height:1.4;padding:3px 0 3px 13px;position:relative}
+.box li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--navy)}
+.box p{font-size:11px;line-height:1.5;padding:0 12px 10px;color:var(--muted)}
+.chips{display:flex;gap:6px;padding:0 12px 10px}
+.chips span{background:var(--soft);color:var(--navy2);font-weight:900;font-size:11.5px;padding:4px 10px;border-radius:12px}
+.cl{counter-reset:c;list-style:none}
+.cl li{counter-increment:c;display:flex;gap:12px;align-items:flex-start;font-size:11.6px;line-height:1.5;padding:8px 0;border-bottom:1px dashed var(--line)}
+.cl li::before{content:counter(c);flex:none;width:22px;height:22px;border-radius:6px;background:var(--soft);color:var(--navy);font-weight:900;font-size:11px;display:flex;align-items:center;justify-content:center}
+.cl b{color:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.st{background:var(--soft);border-radius:8px;padding:10px 11px;border-top:3px solid var(--blue)}
+.st b{display:block;font-size:11.8px;color:var(--navy2);margin:3px 0 2px}
+.st span{font-size:10.4px;line-height:1.35;display:block}
+.st i{font-style:normal;font-weight:900;color:var(--blue);font-size:11px}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:34px}
+.sign div{border-top:1px solid #9aa0c0;padding-top:6px;text-align:center;font-size:10.8px;color:var(--muted)}
+.sign b{display:block;color:var(--ink);font-size:11.5px}
+.foot{position:absolute;left:0;right:0;bottom:0;height:90px}
+.foot .a{position:absolute;left:0;bottom:0;width:330px;height:78px;background:var(--navy);clip-path:polygon(0 0,88% 0,100% 100%,0 100%)}
+.foot .b{position:absolute;left:220px;right:0;bottom:0;height:54px;background:#3e4596;clip-path:polygon(10% 0,100% 0,100% 100%,0 100%)}
+.foot .c{position:absolute;left:300px;right:28px;bottom:12px;display:flex;justify-content:flex-end;gap:18px;color:#fff;font-weight:900;font-size:14px;align-items:center;white-space:nowrap}
+.foot .c span{display:flex;align-items:center;gap:9px}
+.foot .c i{width:28px;height:28px;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center}
+.foot .c svg{width:17px;height:17px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pn{position:absolute;left:28px;bottom:30px;color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;z-index:2}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <img class="net" src="assets/net.png" alt="">
+  <img class="robot" src="assets/robot.png" alt="">
+  <img class="logo" src="assets/logo.png" alt="TGH Technology Solution">
+  <h1>PROPUESTA DESARROLLO DE PÁGINA WEB</h1>
+  <div class="pill">WORDPRESS · DISEÑO 100% PERSONALIZADO</div>
+
+  <div class="wrap">
+    <div class="meta">
+      <div><small>CLIENTE</small><b>PREGÓN · Diario de prensa</b></div>
+      <div><small>FECHA</small><b>12/10/2026</b></div>
+      <div><small>TIEMPO DE ENTREGA</small><b>15 días hábiles</b></div>
+    </div>
+
+    <div class="sec">INTRODUCCIÓN</div>
+    <p class="intro">Desarrollaremos la página web de <b>PREGÓN</b> en WordPress para que su equipo pueda <b>publicar y gestionar noticias y artículos de forma ágil</b>, organizados por categorías, y así <b>ampliar su alcance y audiencia online</b>.</p>
+
+    <div class="sec">¿QUÉ INCLUYE?</div>
+    <div class="feat">
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div><div><b>6 vistas</b><span>Páginas o secciones del sitio</span></div></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M4 9l5 11M9 5l6 15M15 5l5 11"/></svg></div><div><b>Desarrollo WordPress</b><span>Plataforma líder para medios</span></div></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><circle cx="11" cy="11" r="2"/></svg></div><div><b>Diseño 100% personalizado</b><span>Acorde a la identidad de PREGÓN</span></div></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg></div><div><b>Web administrable</b><span>Publica noticias por categorías</span></div></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4-1z"/></svg></div><div><b>WhatsApp flotante</b><span>Contacto directo con lectores</span></div></div>
+      <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></div><div><b>Redes sociales</b><span>Enlaces a todas sus redes</span></div></div>
+    </div>
+
+    <div class="sec">CRONOGRAMA</div>
+    <div class="tl">
+      <div class="d1"><b>Diseño</b><span>Propuesta visual y aprobación</span><em>5 días</em></div>
+      <div class="d2"><b>Desarrollo y despliegue</b><span>Programación, carga, pruebas, publicación y capacitación</span><em>10 días</em></div>
+    </div>
+    <div class="tlnote"><span>Días hábiles, contados desde el inicio del proyecto.</span><span>Total estimado: <b>15 días hábiles</b></span></div>
+
+    <div class="price">
+      <div class="inv">
+        <h4>INVERSIÓN</h4>
+        <div class="row"><div><b>Página web WordPress</b><small>Diseño + desarrollo + despliegue</small></div><div class="v g">Incluido</div></div>
+        <div class="row"><div><b>Capacitación</b><small>Online, grabada en video</small></div><div class="v g">Incluido</div></div>
+        <div class="row" style="border-bottom:none"><div><b>Soporte técnico</b><small>Post-lanzamiento</small></div><div class="v g">Incluido</div></div>
+        <div class="note"><b>No incluye</b> hosting ni dominio (ver página 2).</div>
+      </div>
+      <div>
+        <div class="dark">
+          <div class="k">INVERSIÓN TOTAL</div>
+          <span class="tag">PAGO ÚNICO</span>
+          <div class="big"><sup>S/</sup><strong>2,500</strong><span>+ IGV</span></div>
+          <p>Todo lo que necesitas para lanzar tu web:</p>
+          <ul><li>Web WordPress de 6 vistas</li><li>Capacitación para tu equipo</li><li>Soporte técnico</li></ul>
+        </div>
+        <p class="fine">Precios en soles · Propuesta válida 15 días</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot"><div class="a"></div><div class="b"></div><span class="pn">1 / 2</span>
+    <div class="c">
+      <span><i><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg></i>976 - 224 - 095</span>
+      <span><i><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></i>administracion@tghtechnologysolution.com</span>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <img class="net" src="assets/net.png" alt="" style="width:380px">
+  <img class="robot" src="assets/robot.png" alt="" style="top:430px">
+  <img class="logo sm" src="assets/logo.png" alt="">
+
+  <div class="wrap p2">
+    <div class="sec">RECURSOS PARA PUBLICAR LA WEB</div>
+    <div class="two">
+      <div class="box"><h3>Hosting recomendado</h3>
+        <ul><li>1 CPU</li><li>2 GB de RAM</li><li>Almacenamiento ilimitado</li><li>Tráfico de red ilimitado</li><li>Subdominios ilimitados</li></ul></div>
+      <div class="box"><h3>Dominio</h3>
+        <p style="padding-top:9px">La dirección web de PREGÓN (con certificado de seguridad). Las extensiones más usadas:</p>
+        <div class="chips"><span>.com</span><span>.pe</span><span>.com.pe</span><span>.net</span></div>
+        <p>Te asesoramos en la compra y configuración de ambos.</p></div>
+    </div>
+
+    <div class="sec">CAPACITACIÓN Y SOPORTE</div>
+    <div class="two">
+      <div class="box"><h3>Capacitación</h3>
+        <ul><li>Sesión online al finalizar el despliegue</li><li>Cómo publicar, editar y categorizar noticias</li><li>Grabada en video y entregada al personal de PREGÓN</li><li>Para gestionar el contenido de forma autónoma</li></ul></div>
+      <div class="box"><h3>Soporte técnico</h3>
+        <ul><li>Acompañamiento después del lanzamiento</li><li>Resolución de dudas de administración</li><li>Corrección de errores del desarrollo entregado</li></ul></div>
+    </div>
+
+    <div class="sec">¿CÓMO EMPEZAMOS?</div>
+    <div class="steps">
+      <div class="st"><i>PASO 1</i><b>Aprobación</b><span>Aceptas la propuesta y coordinamos el inicio.</span></div>
+      <div class="st"><i>PASO 2</i><b>Diseño</b><span>Presentamos el diseño para tu aprobación.</span></div>
+      <div class="st"><i>PASO 3</i><b>Desarrollo</b><span>Construimos, cargamos y probamos la web.</span></div>
+      <div class="st"><i>PASO 4</i><b>Lanzamiento</b><span>Publicamos la web y capacitamos a tu equipo.</span></div>
+    </div>
+
+    <div class="sec">CONDICIONES</div>
+    <ol class="cl">
+      <li><span>Una vez <b>aprobado el diseño</b>, no se podrán realizar cambios sobre él.</span></li>
+      <li><span>Todo cambio o integración adicional solicitado después de la aprobación se <b>cotizará como un nuevo requerimiento</b>, con una ampliación de tiempo acorde.</span></li>
+      <li><span>El <b>hosting y el dominio</b> no están incluidos en la inversión y se adquieren a nombre de PREGÓN.</span></li>
+      <li><span>Los plazos se cuentan en <b>días hábiles</b> y dependen de la entrega oportuna de contenidos (logo, textos e imágenes) por parte del cliente.</span></li>
+    </ol>
+
+    <div class="sign">
+      <div><b>TGH Technology Solution</b>Agencia de marketing digital</div>
+      <div><b>PREGÓN</b>Aceptación de la propuesta</div>
+    </div>
+  </div>
+
+  <div class="foot"><div class="a"></div><div class="b"></div><span class="pn">2 / 2</span>
+    <div class="c">
+      <span><i><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg></i>976 - 224 - 095</span>
+      <span><i><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></i>administracion@tghtechnologysolution.com</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
