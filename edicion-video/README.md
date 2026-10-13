@@ -62,3 +62,17 @@ python3 editar.py crudo.mp4 -o youtube.mp4 --formato horizontal --look cine --es
 - **Zona segura en Reels/TikTok:** evita texto en el 15 % inferior y superior (los botones lo tapan).
 - **Música:** sin derechos de autor (biblioteca de YouTube, Pixabay, Epidemic Sound).
 - **Exporta** en MP4 H.264, 30 fps, 1080p: es lo que mejor procesan las plataformas.
+
+## Sistema visual TGH (según el video de referencia)
+
+| Elemento | Especificación |
+|---|---|
+| Tipografía | **Poppins** — SemiBold (línea chica), Bold/ExtraBold (línea grande), tracking −5 % |
+| Amarillo | `#FCFC00` con glow suave |
+| Azul TGH | `#3B00EF` (pastillas y fondo duotono) |
+| Verde | `#25D067` (pastilla "Solución", estilo WhatsApp) |
+| Rojo | `#F03635` (fondo de énfasis negativo, palabra repetida x3) |
+| Recursos | Subtítulo en 2 niveles, palabras a todo el ancho detrás de la persona (segmentación MediaPipe), efecto REC, stickers con borde blanco, flash blanco en cortes, tarjeta final TGH |
+
+Render del reel: `python3 proyectos/tgh_3_errores.py crudo.mp4 referencia.mp4 proyectos/tgh_3_errores_transcripcion.json salida.mp4 selfie_multiclass.tflite`
+(modelo: `storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/latest/selfie_multiclass_256x256.tflite`; fuentes Poppins de github.com/google/fonts).
