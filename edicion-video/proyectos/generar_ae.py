@@ -146,11 +146,12 @@ class Generador:
             "proyecto": t["proyecto"], "ancho": t["ancho"], "alto": t["alto"], "fps": self.fps,
             "n_total": self.n_total, "f_fin_toma": self.fr(t["fin_toma"]),
             "ancla": [ax, ay], "zoom": zoom, "zpos": zpos,
-            "footage": {k: self.existe(v) for k, v in fp.items()},
+            "footage": {k: (v if k == "original" else self.existe(v)) for k, v in fp.items()},
             "audio": {"voz": self.existe(au["voz"]), "musica": self.existe(au["musica"]),
-                      "musica_sin_ducking": self.existe(au["musica_sin_ducking"]),
-                      "sfx_mezcla": self.existe(au["sfx_mezcla"]), "mezcla": self.existe(au["mezcla"])},
-            "referencia": self.existe("07_Referencia/Render_final_referencia.mp4"),
+                      # opcionales: el .jsx los importa solo si están en el paquete
+                      "musica_sin_ducking": au["musica_sin_ducking"], "sfx_mezcla": au["sfx_mezcla"],
+                      "mezcla": au["mezcla"]},
+            "referencia": "07_Referencia/Render_final_referencia.mp4",
             "sfx": sfx, "capas": capas, "marcadores": marcadores,
             "sombra": t["estilo_texto"]["sombra"], "glow": t["estilo_texto"]["glow_amarillo"],
             "etiquetas": ETIQUETAS,
@@ -653,11 +654,10 @@ LEEME = """PROYECTO AFTER EFFECTS — Reel "3 errores en redes" (TGH Technology 
 ==========================================================================
 
 CÓMO ABRIRLO (2 minutos)
-1. Descomprime TODAS las partes en la MISMA carpeta (cada ZIP trae la carpeta TGH_3_errores_AE;
-   si pregunta, acepta combinar/fusionar carpetas). No cambies los nombres de las subcarpetas.
-   - Parte 1, 2 y 3: imprescindibles (script, gráficos, mate, fuentes, voz, música, toma, efectos).
-   - Parte 4: toma original sin color (opcional, para recolorizar).
-   - Parte 5: render final de referencia + stems de mezcla (opcional).
+1. Descomprime el ZIP (si lo recibiste en varias partes, descomprímelas todas en la MISMA carpeta
+   y acepta combinar carpetas). No cambies los nombres de las subcarpetas.
+   Los archivos opcionales (toma original, render de referencia, mezclas) pueden no venir:
+   el script funciona igual y solo avisa.
 2. Instala las fuentes de 06_Fuentes (Poppins SemiBold, Bold, ExtraBold y DejaVu Sans Mono).
    Si After Effects estaba abierto, ciérralo y vuelve a abrirlo.
 3. After Effects 2020 o superior > Archivo > Scripts > Ejecutar archivo de script…
