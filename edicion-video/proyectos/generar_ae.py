@@ -547,7 +547,7 @@ PLANTILLA = r"""// CONSTRUIR_PROYECTO_TGH.jsx
         fondo.name = "FONDO Toma con color";
         fondo.startTime = 0;
         fijarInOut(fondo, 0, finToma);
-        fondo.audioEnabled = false;
+        if (fondo.hasAudio) { fondo.audioEnabled = false; }
         fondo.label = D.etiquetas.fondo;
         zoomToma(fondo);
 
@@ -558,7 +558,7 @@ PLANTILLA = r"""// CONSTRUIR_PROYECTO_TGH.jsx
         persona.name = "PERSONA (recorte con mate)";
         persona.startTime = 0;
         fijarInOut(persona, 0, finToma);
-        persona.audioEnabled = false;
+        if (persona.hasAudio) { persona.audioEnabled = false; }
         persona.label = D.etiquetas.persona;
         persona.comment = "Copia de la toma recortada con el mate: va encima de los textos y capturas de atras.";
         zoomToma(persona);
@@ -567,7 +567,7 @@ PLANTILLA = r"""// CONSTRUIR_PROYECTO_TGH.jsx
         mate.name = "MATE persona (luma)";
         mate.startTime = 0;
         fijarInOut(mate, 0, finToma);
-        mate.audioEnabled = false;
+        if (mate.hasAudio) { mate.audioEnabled = false; }
         mate.label = D.etiquetas.persona;
         zoomToma(mate);
 
@@ -578,7 +578,7 @@ PLANTILLA = r"""// CONSTRUIR_PROYECTO_TGH.jsx
         capa = comp.layers.add(iCierre);
         capa.name = "CIERRE tarjeta TGH";
         capa.startTime = finToma;
-        capa.audioEnabled = false;
+        if (capa.hasAudio) { capa.audioEnabled = false; }
         capa.label = D.etiquetas.fondo;
 
         crearGrupo(comp, D.capas.flash, fGraf, fSolidos);
