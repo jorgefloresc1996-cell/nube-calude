@@ -217,6 +217,14 @@ PLANTILLA = r"""// CONSTRUIR_PROYECTO_TGH.jsx
         return it;
     }
 
+    function importarOpcional(rel, carpeta) {
+        if (!archivoRel(rel).exists) {
+            aviso("Opcional no encontrado (descomprime las partes 4 y 5 si lo quieres): " + rel);
+            return null;
+        }
+        return importar(rel, carpeta);
+    }
+
     function tr(capa, mn) { return capa.property("ADBE Transform Group").property(mn); }
 
     function claves(prop, k) {
@@ -492,13 +500,13 @@ PLANTILLA = r"""// CONSTRUIR_PROYECTO_TGH.jsx
         var iToma = importar(D.footage.toma, fFoot);
         var iMate = importar(D.footage.mate, fMates);
         var iCierre = importar(D.footage.cierre, fFoot);
-        importar(D.footage.original, fFoot);
+        importarOpcional(D.footage.original, fFoot);
         var iVoz = importar(D.audio.voz, fAudio);
         var iMusica = importar(D.audio.musica, fAudio);
-        importar(D.audio.musica_sin_ducking, fAudio);
-        importar(D.audio.sfx_mezcla, fAudio);
-        var iMezcla = importar(D.audio.mezcla, fAudio);
-        var iRef = importar(D.referencia, fRef);
+        importarOpcional(D.audio.musica_sin_ducking, fAudio);
+        importarOpcional(D.audio.sfx_mezcla, fAudio);
+        var iMezcla = importarOpcional(D.audio.mezcla, fAudio);
+        var iRef = importarOpcional(D.referencia, fRef);
 
         // Precomp de efectos de sonido (cada SFX en su capa y su tiempo).
         var compSfx = fComps.items.addComp("SFX_TGH (efectos de sonido)", D.ancho, D.alto, 1, dur, D.fps);
@@ -514,19 +522,23 @@ PLANTILLA = r"""// CONSTRUIR_PROYECTO_TGH.jsx
         comp.bgColor = [0, 0, 0];
 
         // Capas de abajo hacia arriba (cada capa nueva entra arriba de todo).
-        capa = comp.layers.add(iRef);
-        capa.name = "GUIA render final (apagada)";
-        capa.startTime = 0;
-        capa.enabled = false;
-        capa.audioEnabled = false;
-        try { capa.guideLayer = true; } catch (eG) {}
-        capa.label = D.etiquetas.guia;
+        if (iRef !== null) {
+            capa = comp.layers.add(iRef);
+            capa.name = "GUIA render final (apagada)";
+            capa.startTime = 0;
+            capa.enabled = false;
+            if (capa.hasAudio) { capa.audioEnabled = false; }
+            try { capa.guideLayer = true; } catch (eG) {}
+            capa.label = D.etiquetas.guia;
+        }
 
-        capa = comp.layers.add(iMezcla);
-        capa.name = "AUDIO Mezcla final (referencia, apagada)";
-        capa.startTime = 0;
-        capa.audioEnabled = false;
-        capa.label = D.etiquetas.audio;
+        if (iMezcla !== null) {
+            capa = comp.layers.add(iMezcla);
+            capa.name = "AUDIO Mezcla final (referencia, apagada)";
+            capa.startTime = 0;
+            capa.audioEnabled = false;
+            capa.label = D.etiquetas.audio;
+        }
 
         capa = comp.layers.add(compSfx);
         capa.name = "AUDIO Efectos de sonido";
@@ -641,7 +653,11 @@ LEEME = """PROYECTO AFTER EFFECTS — Reel "3 errores en redes" (TGH Technology 
 ==========================================================================
 
 CÓMO ABRIRLO (2 minutos)
-1. Descomprime el ZIP en una carpeta (no cambies los nombres de las subcarpetas).
+1. Descomprime TODAS las partes en la MISMA carpeta (cada ZIP trae la carpeta TGH_3_errores_AE;
+   si pregunta, acepta combinar/fusionar carpetas). No cambies los nombres de las subcarpetas.
+   - Parte 1, 2 y 3: imprescindibles (script, gráficos, mate, fuentes, voz, música, toma, efectos).
+   - Parte 4: toma original sin color (opcional, para recolorizar).
+   - Parte 5: render final de referencia + stems de mezcla (opcional).
 2. Instala las fuentes de 06_Fuentes (Poppins SemiBold, Bold, ExtraBold y DejaVu Sans Mono).
    Si After Effects estaba abierto, ciérralo y vuelve a abrirlo.
 3. After Effects 2020 o superior > Archivo > Scripts > Ejecutar archivo de script…
