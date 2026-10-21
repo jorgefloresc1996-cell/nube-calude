@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Cotización TGH · Social Media Marketing</title>
+<style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+:root { --navy:#383f83; --soft:#eef0fa; --line:#d9dcef; --ink:#30334b; --muted:#6b6f8c; --green:#2f9e63; --paid:#f6fbf8; }
+body { margin:0; font-family:'Liberation Sans', Arial, sans-serif; color:var(--ink); font-size:11px; }
+.page { width:210mm; height:297mm; position:relative; padding:15mm 20mm 0; page-break-after:always; overflow:hidden; }
+.page:last-child { page-break-after:auto; }
+.top { display:flex; justify-content:space-between; align-items:flex-start; }
+.top img { width:56mm; }
+.meta { text-align:right; font-size:10px; line-height:1.75; color:var(--muted); }
+.meta b { color:var(--navy); }
+h1 { color:var(--navy); font-size:24px; margin:9mm 0 2mm; }
+.sub { color:var(--muted); font-size:12.5px; margin:0 0 6mm; }
+.kpis { background:var(--soft); border-radius:6px; display:grid; grid-template-columns:0.8fr 1.35fr 0.75fr 1.15fr 1fr; padding:12px 16px; gap:10px; margin-bottom:7mm; }
+.kpis small { display:block; font-size:9px; letter-spacing:.8px; color:#8c90ab; margin-bottom:5px; }
+.kpis b { color:var(--navy); font-size:12px; }
+.sec { display:flex; align-items:center; gap:7px; color:var(--navy); font-weight:700; font-size:13px; letter-spacing:.8px; margin:0 0 4mm; }
+.sec i { font-style:normal; width:16px; height:16px; border-radius:50%; background:var(--navy); color:#fff; font-size:9px; display:flex; align-items:center; justify-content:center; }
+table { width:100%; border-collapse:collapse; }
+th { background:var(--navy); color:#fff; text-align:left; font-size:10px; letter-spacing:.6px; padding:9px 9px; }
+td { padding:7px 9px; border-bottom:1px solid var(--line); vertical-align:middle; line-height:1.4; }
+td.area { background:var(--soft); color:#4d5391; font-weight:700; font-size:10px; letter-spacing:.4px; border-bottom:3px solid #fff; width:27%; }
+td.val { font-weight:700; color:var(--ink); width:33%; }
+.ok { color:var(--green); font-weight:700; } .ok span { color:var(--ink); }
+.note { font-weight:400; color:var(--muted); font-size:9.5px; }
+tr.paid td:not(.area) { background:var(--paid); }
+tr.live td:not(.area) { background:#fff7f0; }
+td.area.live { background:#ffeedd; color:#a4521a; }
+.new { display:inline-block; background:#f08a3c; color:#fff; font-size:8px; font-weight:700; letter-spacing:.6px; border-radius:8px; padding:1px 6px; margin-left:5px; vertical-align:1px; }
+.pill { display:inline-block; border:1.5px solid var(--navy); color:var(--navy); border-radius:12px; padding:1px 9px; font-weight:700; font-size:10px; margin-right:3px; }
+.foot { position:absolute; left:0; right:0; bottom:0; height:17mm; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:space-between; padding:0 20mm; font-size:10.5px; }
+.foot .ic { display:inline-block; background:#fff; color:var(--navy); border-radius:3px; font-size:8px; padding:0 3px; margin-right:6px; font-weight:700; }
+.foot span + span { margin-left:16px; }
+.inv { display:grid; grid-template-columns:57% 43%; border:1.5px solid var(--navy); border-radius:6px; overflow:hidden; margin-bottom:7mm; }
+.inv .l { padding:14px 18px; }
+.inv .l h3 { color:var(--navy); font-size:13px; margin:0 0 8px; }
+.inv ul { margin:0; padding-left:16px; line-height:1.95; font-size:11px; }
+.inv .r { background:var(--navy); color:#fff; padding:0 20px; display:flex; flex-direction:column; justify-content:center; }
+.inv .r small { font-size:9.5px; letter-spacing:1px; opacity:.85; }
+.inv .r b { font-size:34px; letter-spacing:-1px; margin:6px 0 4px; }
+.inv .r span { font-size:10.5px; opacity:.85; }
+.team { display:grid; grid-template-columns:repeat(6,1fr); gap:7px; margin-bottom:7mm; }
+.team div { background:var(--soft); border-radius:5px; text-align:center; padding:9px 4px; font-size:9.5px; line-height:1.35; }
+.team b { display:block; color:var(--navy); font-size:19px; margin-bottom:3px; }
+.team div.live { background:#ffeedd; } .team div.live b { color:#a4521a; }
+ul.cond { margin:0 0 5mm; padding-left:16px; line-height:1.6; font-size:11px; }
+.pay { background:var(--navy); color:#fff; font-weight:700; text-align:center; border-radius:5px; padding:11px; margin-bottom:5mm; }
+.close { background:var(--soft); border-left:4px solid var(--navy); padding:13px 18px; line-height:1.6; font-size:11px; margin-bottom:12mm; }
+.sign { display:flex; justify-content:space-between; }
+.sign div { width:44%; border-top:1px solid var(--navy); text-align:center; padding-top:6px; color:var(--muted); font-size:10px; }
+</style></head><body>
+
+<section class="page">
+  <div class="top"><img src="logo.png" alt="TGH Technology Solution">
+    <div class="meta"><b>Cotización</b><br>Social Media Marketing<br>Fecha: 21 de octubre de 2026</div></div>
+  <h1>Propuesta de Social Media Marketing</h1>
+  <p class="sub">Gestión integral de redes sociales, lives y publicidad pagada en Meta Ads y Google Ads.</p>
+  <div class="kpis">
+    <div><small>REDES SOCIALES</small><b>3 redes</b></div>
+    <div><small>CONTENIDOS</small><b>12 piezas + 8 videos</b></div>
+    <div><small>LIVES</small><b>4 al mes</b></div>
+    <div><small>PUBLICIDAD</small><b>Meta y Google Ads</b></div>
+    <div><small>INVERSIÓN</small><b>S/ 1,700 + IGV</b></div>
+  </div>
+  <div class="sec"><i>1</i>PAQUETE COMMUNITY MANAGER</div>
+  <table>
+    <tr><th>ÁREA</th><th>DETALLE</th><th>PAQUETE PERSONALIZADO</th></tr>
+    <tr><td class="area" rowspan="3">ESTRATEGIA</td><td>Estrategia orgánica</td><td class="val ok">✓ <span>Sí</span></td></tr>
+    <tr><td>Cronograma de contenido</td><td class="val ok">✓ <span>Sí</span></td></tr>
+    <tr><td>Planificación del presupuesto a invertir en publicidad</td><td class="val ok">✓ <span>Sí</span></td></tr>
+    <tr><td class="area" rowspan="2">DISEÑO</td><td>Portada de Facebook</td><td class="val ok">✓ <span>Sí</span></td></tr>
+    <tr><td>Concepto creativo y línea gráfica digital</td><td class="val ok">✓ <span>Sí</span></td></tr>
+    <tr><td class="area" rowspan="3">GESTIÓN DE REDES SOCIALES</td><td>Cantidad de redes sociales a gestionar</td><td class="val">3</td></tr>
+    <tr><td>Creación de contenido</td><td class="val">12 publicaciones</td></tr>
+    <tr><td>Monitoreo</td><td class="val">Lun. a vie. de 8 a.m. a 6 p.m.</td></tr>
+    <tr><td class="area" rowspan="3">PRODUCCIÓN</td><td>Visitas al cliente</td><td class="val">2 visitas</td></tr>
+    <tr><td>Edición de videos</td><td class="val">8 videos</td></tr>
+    <tr><td>Horarios de grabación</td><td class="val">Lun. a vie. 8 a.m. a 6 p.m.<br>Sáb. 9 a.m. a 1 p.m.</td></tr>
+    <tr class="live"><td class="area live" rowspan="2">TRANSMISIONES EN VIVO <span class="new">NUEVO</span></td><td>Creadora de contenido para los lives de la marca</td><td class="val ok">✓ <span>Sí</span></td></tr>
+    <tr class="live"><td>Cantidad de lives</td><td class="val">4 lives al mes</td></tr>
+    <tr class="paid"><td class="area" rowspan="3">PUBLICIDAD PAGADA</td><td>Propuesta de estrategia de publicidad pagada</td><td class="val ok">✓ <span>Sí</span> <span class="note">(el cliente envía los recursos)</span></td></tr>
+    <tr class="paid"><td>Ejecución de campañas</td><td class="val"><span class="pill">Meta Ads</span><span class="pill">Google Ads</span></td></tr>
+    <tr class="paid"><td>Reporte de campañas</td><td class="val ok">✓ <span>Sí</span></td></tr>
+    <tr><td class="area">REPORTE</td><td>Reporte de cumplimiento</td><td class="val">Mensual</td></tr>
+  </table>
+  <div class="foot"><div><span><span class="ic">✆</span>976 - 224 - 095</span><span><span class="ic">@</span>administracion@tghtechnologysolution.com</span></div><div>1 / 2</div></div>
+</section>
+
+<section class="page">
+  <div class="top"><img src="logo.png" alt="TGH Technology Solution">
+    <div class="meta"><b>Cotización</b><br>Social Media Marketing</div></div>
+  <div style="height:8mm"></div>
+  <div class="sec"><i>2</i>INVERSIÓN</div>
+  <div class="inv">
+    <div class="l"><h3>Paquete Social Media Marketing</h3>
+      <ul><li>Estrategia, cronograma y línea gráfica</li><li>Gestión de 3 redes sociales y 12 contenidos</li><li>Producción y edición de 8 videos</li><li><b>Creadora de contenido para 4 lives al mes</b></li><li>Campañas en Meta Ads y Google Ads</li><li>Reporte mensual de cumplimiento</li></ul></div>
+    <div class="r"><small>PRECIO DEL PAQUETE</small><b>S/ 1,700</b><span>No incluye IGV</span></div>
+  </div>
+  <div class="sec"><i>3</i>EQUIPO DEDICADO A SU MARCA</div>
+  <div class="team">
+    <div><b>1</b>Coordinador de Marketing</div><div><b>1</b>Trafficker Digital</div><div><b>2</b>Comunicadores Audiovisuales</div>
+    <div><b>1</b>Diseñador(a) Gráfico(a)</div><div><b>1</b>Community Manager</div><div class="live"><b>1</b>Creadora de contenido (lives)</div>
+  </div>
+  <div class="sec"><i>4</i>CONDICIONES</div>
+  <ul class="cond">
+    <li>El precio no incluye IGV.</li>
+    <li>El presupuesto de pauta publicitaria (inversión en Meta Ads y Google Ads) no está incluido en el precio y es asumido por el cliente.</li>
+    <li>Para la publicidad pagada, el cliente envía todos los recursos necesarios (accesos, información y material de la marca).</li>
+    <li>Los horarios de grabación y las visitas se coordinan previamente con el cliente.</li>
+    <li>Las fechas, horarios y temas de los 4 lives mensuales se coordinan previamente con el cliente.</li>
+  </ul>
+  <div class="pay">El pago se realiza 100% por adelantado antes del inicio del servicio.</div>
+  <div class="close">Con este paquete, su marca contará con un equipo completo de marketing digital que planifica, produce, publica y mide resultados, combinando contenido orgánico, transmisiones en vivo con una creadora de contenido y campañas en Meta Ads y Google Ads. Quedamos atentos para resolver cualquier consulta y dar inicio al servicio.</div>
+  <div class="sign"><div>TGH Technology Solution</div><div>Aprobado por el cliente</div></div>
+  <div class="foot"><div><span><span class="ic">✆</span>976 - 224 - 095</span><span><span class="ic">@</span>administracion@tghtechnologysolution.com</span></div><div>2 / 2</div></div>
+</section>
+</body></html>
